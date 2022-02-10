@@ -1,0 +1,202 @@
+	
+	.wrap{
+		
+		position:relative;
+		padding:80px 80px 100px 80px;
+		margin:40px auto !important; 
+		width:90%; min-width:1200px;
+	}
+	
+	.forcenter
+	{
+		margin:0 auto;
+	}
+	
+	
+	.grayblock
+	{
+		font-size: 14px;
+	    width: 55px;
+	    border-radius: 5px;
+	    background-color: #b5b3b7;
+	    text-align: center;
+	    color: white;
+	}
+	
+	.whowebsite
+	{
+		display:inline-block;
+	}
+	
+	.data
+	{
+		margin:40px 0px;
+		width:75px;
+	}
+	
+	.nav_tag
+	{
+		font-size:18px !important;
+	}
+	
+	.nav_tag
+	{
+		font-size: 14px;
+		color:#808080;
+	}
+	
+	.atag_now
+	{
+		color:#165B8E !important;
+	}
+	.forcenter > div
+	{
+		font-size:inherit;
+	}
+	.forcenter > div:nth-child(1)
+	{
+		font-weight:600;
+		color: #808080;
+	}
+	
+	.forcenter > div:nth-child(1)
+	{
+		padding-bottom:10px;
+	}
+	
+	.wrap > div
+	{
+		width:80%;
+	}
+	
+	.info_box
+	{
+		position:relative;
+		width:100%;
+		margin:0 auto;
+		padding-bottom: 40px;
+		
+	}
+	.info_box > div:nth-child(1)
+	{
+		position:relative;
+		display:inline-block;
+		width:320px; height:410px;
+		overflow:hidden;
+	}
+	.info_box > div:nth-child(2)
+	{
+		position:absolute;
+		display:inline-block;
+		top:10px;
+		padding-left:40px;
+	}
+	
+	.info_box > div:nth-child(2) > div
+	{
+		margin-bottom:15px;
+	}
+	
+	.view_image
+	{
+		border-radius:10px;
+	}
+	
+	.title
+	{	
+		font-weight:700;
+		font-size:30px !important;
+		color:#165b8e;
+	}
+	
+	.adress
+	{
+		border-top:1px solid #e2e2e9;;
+		border-bottom:1px solid #e2e2e9;;
+		padding:5px 0px;
+		font-size:20px;
+	}
+	
+	.data
+	{
+		font-size:14px !important;
+	}
+	
+	.btn_box
+	{
+		display: inline-block; 
+  	  bottom: 10;
+   	 text-align: center;
+   	 width: 400px;
+		
+	}
+	.btn_box > div
+	{
+		display:inline-block;
+		height:60px; line-height:60px;
+		border: 1px solid #f0f0f0; border-radius:5px;
+		font-size:22px;
+		text-align:center;
+		cursor:pointer;
+	}
+	
+	.btn_box > div:hover
+	{
+		background-color: #165b8e;
+		color: white;
+	}
+	
+	.btn_box > div:nth-child(1)
+	{
+		width:220px;
+	}
+	.btn_box > div:nth-child(2)
+	{
+		width:80px;
+	}
+	.btn_box > div:nth-child(3)
+	{
+		width:80px;
+	}
+	
+	.moreinfo
+	{
+		padding-bottom: 100px;
+		    min-width: 752px;
+	}
+	.moreinfo_title
+	{
+		font-size:28px;
+	}
+	
+	.moreinfo > div
+	{
+		width:100%;
+		padding:10px;
+		border: 1px solid #f0f0f0;
+	}
+	
+	.specific_info
+	{
+		text-align:left !important;
+		margin-bottom:70px;
+	}
+	
+	.moreinfo > div:nth-child(1)
+	{
+		margin-bottom: 40px;
+		font-size: 16px;
+		
+	}
+	.moreinfo > div:nth-child(2)
+	{
+		text-align:center;
+	}
+	
+	
+	.license_img
+	{
+		width:80px; height:28px;
+		overflow: hidden;
+		background-repeat: no-repeat;
+	}

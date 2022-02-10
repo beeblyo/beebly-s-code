@@ -1,0 +1,408 @@
+/* ==================== board ==================== */
+.board_wrap
+{
+	margin-top: 110px;
+	min-width:840px;
+}
+
+/* ========== search_wrap ========== */
+.search_wrap
+{
+	position: relative;
+	height: 31px;
+	
+	margin-bottom: 20px;
+}
+
+.search_wrap div
+{
+	position: absolute;
+	display: inline-block;
+}
+
+/* ===== select ===== */
+.search_wrap select
+{
+	left: 0;
+	
+	width: 80px;
+	padding: 6px 0;
+}
+
+/* ===== search ===== */
+.search_wrap .search
+{
+	left: 50%;
+	transform: translate(-50%, 0);
+	
+	width:60%; max-width: 520px;
+	
+	font-size: 0;
+}
+
+.search input[type=text]
+{
+	width: 84%;
+	
+	border: 1px solid #eee;
+	padding: 5px 10px;
+	
+	vertical-align: top;
+}
+
+.search input[type=submit].btn
+{
+	width: 15%;
+	
+	padding: 4px 0;
+
+	background: #fff;
+	border: 1px solid #ddd;
+}
+
+.search input[type=submit].btn:hover
+{
+	background: #11273f;
+}
+
+/* ===== btn_wrap ===== */
+.search_wrap .btn_wrap
+{
+	right: 0;
+}
+
+.search_wrap .btn_wrap .btn
+{
+	background: #eee;
+	padding: 4px 0;
+	
+	text-align: center;
+}
+
+.search_wrap .btn_wrap .btn:hover
+{
+	background: #11273f;
+}
+
+/* ========== table ========== */
+.thead
+{
+	border-top: 1px solid #11273f;
+	border-bottom: 1px solid #11273f;
+}
+
+.tbody .row
+{
+	border-bottom: 1px solid #ddd;
+}
+
+.tbody .row:hover
+{
+	background: #ddd;
+}
+
+.tbody .row:last-child
+{
+	border-bottom: 1px solid #11273f;
+}
+
+.column span
+{
+	font-size: 16px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #6b77eb;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 10px;
+    padding: 0px 5px;
+    color: white;
+}
+
+.row .column:nth-child(1)
+{
+	width: 5%;
+}
+
+.row .column:nth-child(2)
+{
+	width: 5%;
+}
+
+.row .column:nth-child(3)
+{
+	width: 60%;
+}
+
+.row .column:nth-child(4)
+{
+	width: 8%;
+}
+
+.row .column:nth-child(5)
+{
+	width: 10%;
+}
+
+.row .column:nth-child(6)
+{
+	width: 8%;
+}
+
+.tbody .column:nth-child(3)
+{
+	text-align: left;
+}
+
+.tbody .column:nth-child(6)
+{
+	text-align: right;
+	padding-right: 10px;
+}
+
+/* ========== paging ========== */
+.paging
+{
+	text-align: center;
+}
+
+.paging li
+{
+	display: inline-block;
+}
+
+.paging a
+{
+	padding: 3px 10px;
+	margin: 3px;
+	border:1px solid #DDDDDD;
+	color:grey;
+	
+}
+
+.paging a:hover
+{
+	color: red;
+}
+
+.paging .now
+{
+	color: red;
+	font-weight: bold;
+	
+}
+
+.board_paging_btn
+{
+	
+	
+}
+
+/* ==================== boardwrite ==================== */
+/* ========== form ========== */
+.form
+{
+	width: 90%; max-width: 800px;
+	
+	margin: 0 auto;
+}
+
+.form form
+{
+	width: 100%;
+}
+
+.form div
+{
+	padding: 5px 0;
+	margin-bottom: 5px;
+}
+
+.form > div:nth-child(3)
+{
+	border-bottom: 1px solid grey;
+}
+
+.form form > div:nth-child(3)
+{
+	padding: 0;
+}
+
+.form span
+{
+	width: 80px;
+}
+
+.form label
+{
+	display: inline-block;
+	width: 50px;
+	
+	margin-left: 10px;
+}
+
+.form input[type=text]
+{
+	width: calc(100% - 88px);
+	
+	padding: 5px 10px;
+	border-bottom: 1px solid #11273f;
+}
+
+.form textarea,
+.form .textarea
+{
+	width: 100%; min-height: 350px;
+	
+	margin-top: 15px;
+	padding: 10px;
+	
+	border: 1px solid #11273f;
+	
+	font-size: inherit;
+}
+
+.form .btn_wrap
+{
+	text-align: center;
+}
+
+.form .btn_wrap .btn
+{
+	padding: 4px 10px;
+	margin-right: 10px;
+}
+
+.form .btn_wrap .btn
+{
+	background: #eee;
+}
+
+.form .btn_wrap .btn:hover
+{
+	background: #11273f;
+}
+
+.form .btn_wrap .btn:last-child
+{
+	margin-right: 0;
+}
+
+/* ========== comment ========== */
+.comment_wrap
+{
+	width: 90%; max-width: 800px;
+	
+	margin: 30px auto;
+}
+
+.comment_wrap > div
+{
+	margin-bottom: 10px;
+}
+
+.comment_wrap textarea
+{
+	display: inline-block;
+	width: calc(100% - 50px);
+	
+	margin-top: 5px;
+	padding: 10px;
+	
+	border: 1px solid #11273f;
+}
+
+.comment_wrap .comment_write
+{
+	margin-bottom: 30px;
+}
+
+.comment_write > form
+{
+	font-size: 0;
+}
+
+.comment_write input[type=submit]
+{
+	width: 50px; height: 52px;
+	
+	vertical-align: bottom;
+	
+	cursor: pointer;
+}
+
+.comment_write input[type=submit]:hover
+{
+	background: #11273f;
+	color: #fff;
+}
+
+.comment
+{
+	padding: 10px;
+}
+
+.comment > div
+{
+	margin-bottom: 10px;
+}
+
+.comment > div > div,
+.comment > div > a
+{
+	font-size: 16px;
+}
+
+.comment .textarea
+{
+	display: inline-block;
+	width: calc(100% - 100px);
+	
+	padding: 10px;
+	
+	background: #fff;
+}
+
+.comment a
+{
+	width: 40px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.comment a:hover
+{
+	color: #11273f;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.comment span
+{
+	font-size: 14px;
+}
+
+.recomment_wrap
+{	
+	padding: 5px 0 0 10%;
+	padding-left: 10%;
+	
+	background: #eee;
+}
+
+.comment.recomment,
+.comment.recomment > div
+{
+	margin-bottom: 0;
+}
+
+.recomment .textarea
+{
+	margin-top: 5px;
+}
+
+.comment_write.recomment_write
+{
+	padding: 10px;
+	margin-bottom: 10px;
+}
