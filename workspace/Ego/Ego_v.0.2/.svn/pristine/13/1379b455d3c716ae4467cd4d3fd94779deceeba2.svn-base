@@ -1,0 +1,65 @@
+package ego.vo;
+import java.util.*;
+public class HashtagVO 
+{
+
+/****************************해시태그******************************/
+	
+	String[] hashtags = 
+	{"000","001","002","003","004","005","006","007","008","009","010",
+	"011","012","013","014","015","016","017","018","019","020",
+	"021","022","023","024","025","026","027","028","029","030",
+	"031","032","033","034","035","036","037","038","039","040"
+	};
+	
+	
+	//**Arrays.asList는 고정된 객체로 구성할 수 있다**//
+	List<String> list = Arrays.asList(hashtags);
+	public void setHash(int i,String values)
+	{
+		if(list != null && list.isEmpty() == false)
+		{
+			list.set(i, values);
+		}else
+		{
+			System.out.println("해당 번호에 값이 없거나 null 입니다.");
+		}
+	}
+
+	public String getHash(int i)
+	{
+		String value = "";
+		if(list != null && list.isEmpty() == false)
+		{
+			value = list.get(i);
+		}else
+		{
+			return "해당 번호에 값이 없거나 null 입니다.";
+		}
+		return value;
+	}
+	
+	public void HashInfo()
+	{
+		System.out.println("===키워드 목록===");
+		for(int i =0; i<list.size(); i++)
+		{
+			System.out.println(i + " : " + list.get(i));
+		}
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		
+		//***************해시태그 세팅*****************//
+		HashtagVO key = new HashtagVO();
+		key.setHash(0, "역사");
+		key.setHash(1, "정치");
+		String val = key.getHash(0);
+		String val2 = key.getHash(1);
+		//System.out.println(val);
+		key.HashInfo();
+	}
+
+}

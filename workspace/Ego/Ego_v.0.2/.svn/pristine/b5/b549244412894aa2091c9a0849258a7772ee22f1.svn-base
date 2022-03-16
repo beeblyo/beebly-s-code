@@ -1,0 +1,111 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<main>
+	<div class="backward_wrap">
+		<div class="back_btn">
+			<a href="/Ego_v.0.2/index.jsp"></a>
+		</div>
+	</div>
+	
+	<div>
+		<h3>회원정보</h3>
+		<div class="info_wrap">
+			<div class="clearfix">
+				<div class="user_profile">
+					<img src="/Ego_v.0.2/img/placeholder/profile.jpg">
+					<p>에고고</p>
+					<a class="mod_btn btn" href="javascript:OpenModal();">회원정보수정</a>
+					<a class="logout_btn btn" href="/Ego_v.0.2/index.jsp">로그아웃</a>
+				</div>
+				<div class="user_contents">
+					<div>
+						<p class="title">키워드</p>
+						
+						<a href="keyword.jsp">▶</a>
+						<div class="keyword">
+							<label>재미있는</label>
+							<label>게으른</label>
+							<label>활발한</label>
+							<label>방콕</label>
+							<label>느긋한</label>
+							<label>사랑스러운</label>
+							<label>착실한</label>
+						</div>
+						
+						<p class="title">MBTI</p>
+						<div class="keyword">
+							<label>INFP</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="user_recommend">
+				<p class="title">Test 즐겨찾기</p>
+				<div>
+					<ul>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="user_record">
+				<p class="title">Test 기록</p>
+				<div>
+					<ul>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+						<li>
+							<a href="/Ego_v.0.2/test/start.jsp"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="background modal_back">
+		<div class="modal">
+			<h3>비밀번호 확인</h3>
+			<form name="pwcheck" method="post" action="modify.jsp">
+				<input id="pw" type="password" name="pw" placeholder="비밀번호 확인"><br>
+				<input class="btn" type="submit" value="확인">
+				<input class="btn" type="button" value="취소" onclick="CloseModal();">
+			</form>
+		</div>
+	</div>
+</main>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="../include/footer.jsp" %>

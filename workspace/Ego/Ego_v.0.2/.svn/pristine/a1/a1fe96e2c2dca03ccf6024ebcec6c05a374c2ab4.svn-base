@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<main>
+	<div class="question_wrap">
+		<div class="backward_wrap">
+			<div class="back_btn">
+				<a href="./question.jsp"></a>
+			</div>
+		</div>
+		
+		<div class="question">
+			<div class="content">
+				<div>
+					<span>제목</span>
+					<p>질문 있어요!!!</p>
+				</div>
+				<div>
+					<span>작성자</span>
+					<p>에고고</p>
+				</div>
+				<div>
+					<span>작성일</span>
+					<p>2022-01-05</p>
+				</div>
+				<div class="textarea">
+					테스트 종류는 언제쯤 늘어나나요?
+				</div>
+			</div>
+				
+			<div class="btn_wrap">
+				<a class="btn" href="./modify.jsp">글수정</a>
+				<a class="btn" href="./question.jsp">글삭제</a>
+			</div>
+		</div>
+		
+		<div class="answer">
+			<div>2022-01-05</div>
+			
+			<div>
+				에고를 사랑해주시는 에고고님 정말 반갑습니다.<br>
+				질문해주신 내용은 사내에서 열심히 협의 중인 내용으로,<br>
+				빠른 시일 내에 새로운 테스트가 올라올 예정입니다.<br>
+				또 다른 문의가 있으신 경우 언제든지 말씀 해주세요!<br>
+				감사합니다. :)
+			</div>
+		</div>
+	</div>
+</main>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="../include/footer.jsp" %>

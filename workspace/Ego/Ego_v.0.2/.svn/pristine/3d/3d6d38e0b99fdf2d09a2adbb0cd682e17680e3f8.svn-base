@@ -1,0 +1,86 @@
+package ego.vo;
+
+public class UserVO 
+{
+	private String no;       //회원 번호
+	private String id;       //회원 아이디
+	private String email;    //회원 이메일
+	private String nickname; //회원 닉네임
+	private String pw;       //회원 비밀번호
+	private String gender;   //회원 성별 
+	private String bdate;    //회원 생년월일
+	private String mbti;     //회원 MBTI
+	private String kword;    //회원 키워드
+	private String jdate;    //회원 가입일자
+	private String retire;   //회원 탈퇴여부
+	private String rdate;    //회원 탈퇴일자
+	private String host;     //회원 권한
+	
+	
+	public String getNo()         {	return no;		}
+	public String getId()         {	return id;		}
+	public String getEmail()      {	return email;	}
+	public String getNickname()   {	return nickname;}
+	public String getPw()         {	return pw;		}
+	public String getGender()     {	return gender;	}
+	public String getBdate()      {	return bdate;	}
+	public String getMbti()       {	return mbti;	}
+	public String getKword()      {	return kword;	}
+	public String getJdate()      {	return jdate;	}
+	public String getRetire()     {	return retire;	}
+	public String getRdate()      {	return rdate;	}
+	public String getHost()       {	return host;	}
+	
+	public String getGenderName()
+	{
+		if(gender.equals("M"))
+		{
+			return "남";
+		}else
+		{
+			return "여";
+		}
+	}
+	
+	public String getHostName()
+	{
+		if(host.equals("Y"))
+		{
+			return "관리자";
+		}else
+		{
+			return "회원";
+		}
+	}
+	
+	public void setNo(String no)             {	this.no = no;			 }
+	public void setId(String id)             {	this.id = id;			 }
+	public void setEmail(String email)       {	this.email = email;  	 }
+	public void setEmailAndID(String email) 
+	{	
+		//메일주소로부터 아이디를 만들어 낸다.
+		this.id = email.split("@")[0];
+		this.email = email;  	 
+	}
+	public void setNickname(String nickname) {	this.nickname = nickname;}
+	public void setPw(String pw)             {	this.pw = pw;			 }
+	public void setGender(String gender)     {	this.gender = gender;	 }
+	public void setBdate(String bdate)       {	this.bdate = bdate;		 }
+	public void setMbti(String mbti)         {	this.mbti = mbti;		 }
+	public void setKword(String kword)       {	this.kword = kword;		 }
+	public void setJdate(String jdate)       {	this.jdate = jdate;		 }	
+	public void setRetire(String retire)     {	this.retire = retire;	 }
+	public void setRdate(String rdate)       {	this.rdate = rdate;	   	 }
+	public void setHost(String host)         {	this.host = host;		 }
+	
+	public void PrintInfo()
+	{
+		System.out.println("회원번호 :" + no);
+		System.out.println("아이디 :" + id);
+		System.out.println("닉네임 :" + nickname);
+		System.out.println("성별 :" + getGenderName());
+		System.out.println("탈퇴여부 :" + retire);
+		System.out.println("권한 :" + getHostName());
+	}
+	
+}

@@ -1,0 +1,44 @@
+package ego.vo;
+
+public class TestVO 
+{
+	private int no; 				//테스트 번호
+	private int joincount; 			//테스트 참여수
+	private String title; 			//테스트 제목
+	private String foldername; 		//테스트 폴더명
+	private String hashtag; 		//테스트 해시태그
+	private String postdate; 		//테스트 게시일
+	 
+	
+	public int getTestNumber() 		{return no;			}
+	public int getJoinCount() 		{return joincount;	}
+	public String getTestTitle() 	{return title;		}
+	public String getFoldername() 	{return foldername;	}	
+	public String getHashtag() 		{return hashtag;	}
+	public String getPostdate() 	{return postdate;	}
+	
+	public void setTestNumber(int no) 				{this.no = no;					}
+	public void setJoincount(int joincount) 		{this.joincount = joincount;	}
+	public void setTestTitle(String title) 			{this.title = title;			}
+	public void setFoldername(String foldername) 	{this.foldername = foldername;	}
+	public void setHashtag(String hasgtag) 			{this.hashtag = hasgtag;		}
+	public void setPostdate(String postdate) 		{this.postdate = postdate;		}
+
+	public void PrintInfo()
+	{
+		System.out.println( "========================================");
+		System.out.println( "테스트번호 no : " + getTestNumber() );
+		System.out.println( "테스트 참여수 joincount : " + getJoinCount() );
+		System.out.println( "테스트 제목 title : " + getTestTitle() );
+		System.out.println( "테스트 폴더명 foldername : " + getFoldername() );
+		System.out.println( "테스트 해시태그 hasgtag : " + getHashtag() );
+		System.out.println( "테스트 게시일 postdate : " + getPostdate() );
+		System.out.println( "========================================");
+	}
+
+	public static void main(String[] args) 
+	{
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<main>
+	<div class="backward_wrap">
+		<div class="back_btn">
+			<a href="./start.jsp"></a>
+		</div>
+	</div>
+	
+	<div class="test_page_wrap">
+		<div class="test_progress_bar">
+			<div class="progress"></div>
+		</div>
+		<div class="test_question">
+		</div>
+		
+		<div class="test_answer claerfix">
+			<a href="progress.jsp">주황색이 좋다</a>
+			<a href="result.jsp">노란색이 좋다</a>
+		</div>
+	</div>
+</main>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="../include/footer.jsp" %>

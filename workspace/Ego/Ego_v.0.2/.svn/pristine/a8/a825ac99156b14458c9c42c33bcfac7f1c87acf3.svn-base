@@ -1,0 +1,64 @@
+package ego.dto;
+import ego.dbms.DBManager;
+import ego.vo.CommentVO;
+
+public class CommentDTO extends DBManager
+{
+	String sql = "";
+	
+	//******************댓글을 등록한다******************************//
+	public boolean commentInsert(CommentVO vo)
+	{
+		if(DBOpen() == false) return false;
+		sql  = "";
+		sql += "insert into comment (no,c_note ) ";
+		sql += "values ('" + vo.getCommentNumber() +"','" + vo.getCommentNote() + "')";
+		RunSQL(sql);
+		return true;
+	}
+	
+	//******************카테고리를 업데이트한다******************************//
+	public boolean commentUpdate(CommentVO vo)
+	{
+		if ( DBOpen() == false ) {return false;}
+		sql = "";
+		sql += "UPDATE comment ";
+		sql += "SET c_no = '" + vo.getCommentNumber() + "', ";
+		sql += "c_note = '" + vo.getCommentNote() + "' ";
+		sql += "WHERE c_no = " + vo.getCommentNumber();
+		RunSQL(sql);
+		return true;
+	}
+	
+	//******************카테고리를 삭제한다******************************//
+	public void commentDelete(CommentVO vo)
+	{
+		if(DBOpen() == true) 
+		{
+			sql  = "";
+			sql += "DELETE FROM comment WHERE c_no = " + vo.getCommentNumber();
+			RunSQL(sql);
+		}
+	}
+	
+	//******************카테고리를 조회한다******************************//
+	public boolean commentIndex(CommentVO vo)
+	{
+		if( DBOpen() == false) {return false;}
+		while (GetNext() == true)
+		{
+			sql = "";
+			sql += "SELECT c_no ";
+			sql += "FROM comment ";
+			sql += "WHERE c_no = " + vo.getCommentNumber();
+		}
+		OpenQuery(sql);
+		return true;
+	}
+	
+	public static void main(String[] args) 
+	{
+
+	}
+
+}

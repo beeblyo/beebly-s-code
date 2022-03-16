@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+<!-- ====================== ¸ÞÀÎ ÄÁÅÙÃ÷ ½ÃÀÛ ==================== -->
+<main>
+	±Û¾²±â È­¸é
+</main>
+<!-- ====================== ¸ÞÀÎ ÄÁÅÙÃ÷ ³¡ ==================== -->
+<%@ include file="../include/footer.jsp" %>

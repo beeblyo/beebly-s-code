@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../../include/ad_header.jsp" %>
+<main>
+	<div>
+		<form class="admin_wrap" name="add" method="post" action="view.jsp">
+			<div class="btn_wrap">
+				<input id="back_btn" class="btn" type="button" value="취소하기" onclick="backBtn('test.jsp')">
+				<input class="btn" type="submit" value="등록하기">
+			</div>
+			
+			<div class="add_form">
+				<div class="file">
+					<div class="h_img">
+						<img alt="" src="">
+						<input type="file">
+					</div>
+					<div class="w_img">
+						<img alt="" src="">
+						<input type="file">
+					</div>
+				</div>
+				<div class="title">
+					<p><span>제목</span><input type="text" name="title" placeholder="제목을 입력하세요.">
+					<p><span>참여자 수</span><input type="text" name="views" placeholder="참여자수" disabled="disabled">
+					<p><span>공유 수</span><input type="text" name="share" placeholder="공유" disabled="disabled">
+					<p><span>추천 수</span><input type="text" name="hit" placeholder="추천" disabled="disabled">
+					<textarea placeholder="테스트 설명을 입력하세요."></textarea>
+				</div>
+			</div>
+		</form>
+	</div>
+</main>
+<%@ include file="../../include/ad_footer.jsp" %>

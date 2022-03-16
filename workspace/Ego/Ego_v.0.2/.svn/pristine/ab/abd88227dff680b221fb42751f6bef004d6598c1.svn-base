@@ -1,0 +1,1674 @@
+/* =============== 공통 작업 =============== */	
+header
+{
+	width: 100%;
+	height: 80px;
+	background: #fff;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+}
+
+header > div
+{
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
+}
+
+h1 
+{
+	display: inline-block;
+	width:140px;
+	height:60px;
+	position: absolute;
+	top: 15px;
+}
+
+h1 a
+{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.login_wrap 
+{
+	display: inline-block;
+	background: #fff;
+	
+	position: absolute;
+	right: 0;
+	top: 35px;
+}
+
+.login_wrap a
+{
+	width: 30px;
+	height: 30px;
+	border: 2px solid #282828;
+	border-radius: 20px;
+	background: url("/Ego_v.0.2/img/icon/info.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.login_wrap a:nth-child(2)
+{
+	border: 0;
+	border-radius: 0;
+	background: url("/Ego_v.0.2/img/icon/logout.png") no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+	margin-bottom: 2px;
+}
+
+.notice_wrap 
+{
+	display: inline-block;
+	font-size: 14px;
+	
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+.search 
+{
+	width: 600px;
+	height: 40px;
+	background: #fff;
+	position:absolute;
+	
+	left: 50%;
+  	transform: translate(-50%, 50%);
+}
+
+.search input[type=text]
+{
+	width: 475px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	float:left;
+}
+
+
+.search_select
+{
+	width: 85px;
+	padding: 0 10px;
+	height:40px;
+	float:left;
+}
+
+.search_btn
+{
+	width:40px;
+	height:100%;
+	padding: 5px;
+	outline:none;
+	float:right;
+}
+
+.recent
+{
+	display: none;
+	width: 100%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+}
+
+.recent > div
+{
+	width: 475px;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate(-45%, 0);
+	padding: 10px;
+	background: #fff;
+    
+    z-index: 999;
+}
+
+.recent p
+{
+	width: 100%;
+	margin: 0 auto 10px;
+	font-size: 12px;
+	color: #aaa;
+}
+
+.recent ul
+{
+	width: 95%;
+    margin: 0 auto;
+}
+
+.recent li
+{
+	padding: 5px 0;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+
+.recent li:hover
+{
+	font-weight: bold;
+}
+
+.wrap 
+{
+	width: 1100px;
+	margin: 0 auto;
+}
+
+main
+{
+	width: 800px;
+	min-height: 560px;
+	margin: 80px auto 30px;
+}
+
+.main
+{
+	margin-top: 80px;
+}
+
+
+/* =============== 포춘 쿠키 =============== */
+.cookies 
+{
+	display: block;
+	width: 100%;
+	height: 60px;
+	background: #6667ab;
+	
+	position: fixed;
+	bottom: 0;
+	
+	display: none;
+}
+
+/* =============== 슬라이드 =============== */
+.slide 
+{
+	height:560px;
+	background: #282828;	
+}
+
+.slide h2
+{
+	 width: 340px;
+	 height: 60px;
+	 line-height: 60px;
+	 text-align: center;
+	 font-size: 28px;
+	 color: white;
+	 margin: 0 auto;
+}
+.swiper 
+{
+	width: 80%;
+	height: 360px;
+}
+
+.swiper-slide
+{
+	width: 260px;
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide img
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slide_wrap
+{
+	position: relative;
+}
+
+
+/* =============== 카테고리 =============== */
+.category 
+{
+	width: 100%;
+	height: 60px;
+	padding: 15px;
+	text-align: center;
+}
+
+.category > a
+{
+	min-width: 120px;
+	padding: 5px 10px;
+	margin-right: 20px;
+	text-align: center;
+	border-radius: 10px;
+	background: #eee;
+}
+
+.category > a:last-child
+{
+	margin-right: 0;
+}
+
+.category > a:hover
+{
+	background: #6667ab;
+	color: #fff;
+}
+
+/* =============== 테스트 리스트 =============== */
+.test_list
+{
+	padding:15px 0 0 0;
+	font-size: 0;
+}
+
+.test_list li
+{
+	display: inline-block;
+	padding-right:40px;
+	margin-bottom: 30px;
+	list-style:none;
+	font-size: 16px;
+}
+
+.test_list li:nth-child(4n)
+{
+	padding-right:0;
+}
+
+.test_view_wrap
+{
+	width:245px; 
+	height:170px; 
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding:15px 15px 0px 15px;
+}
+
+/* =============== 테스트 이미지 예시 =============== */
+.test_list li:nth-child(1) .test_view
+{
+	background: url("../img/thumb/001.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.test_list li:nth-child(2) .test_view
+{
+	background: url("../img/thumb/002.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.test_list li:nth-child(3) .test_view
+{
+	background: url("../img/thumb/003.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.test_list li:nth-child(4) .test_view
+{
+	background: url("../img/thumb/004.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.test_list li:nth-child(5) .test_view
+{
+	background: url("../img/thumb/005.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.test_list li:nth-child(6) .test_view
+{
+	background: url("../img/thumb/006.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.test_list li:nth-child(7) .test_view
+{
+	background: url("../img/thumb/007.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.test_list li:nth-child(8) .test_view
+{
+	background: url("../img/thumb/008.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+/* =============== 테스트 썸네일 =============== */
+.test_view
+{
+	width:215px;
+	height:110px;
+	margin-bottom:10px;
+	cursor: pointer;
+	position: relative;
+}
+
+.test_view > div
+{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	padding:10px 0px 0px 10px;
+	
+	position: absolute;
+}
+
+.test_view:hover > div
+{
+	display: block;
+}
+
+.test_cate
+{
+	width:60px; 
+	height:20px; 
+	line-height: 20px;
+	color: #fff;
+	background:red;
+	border-radius: 10px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.test_title
+{
+	width:150px; 
+	height:20px; 
+	background:white; 
+	float:left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.test_count
+{
+	width:50px;
+	height:20px;
+	float:right;
+}
+
+.test_count img
+{
+	width:10px;
+	height:10px;
+}
+
+/* =============== btn =============== */
+.back_btn
+{
+	width: 30px;
+	height: 40px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 30px;
+	margin-bottom: 40px;
+}
+
+.back_btn a
+{
+	width: 100%;
+	height: 100%;
+	background: url('/Ego_v.0.2/img/icon/back_btn.png') no-repeat center center;
+	background-size: 80%;
+}
+
+/* =============== 검색 페이지 =============== */
+.search_result
+{
+	height:115px;
+	line-height: 115px;
+	font-size: 24px;
+	text-align:center;
+}
+
+.search_result b
+{
+	color: #6667AB;
+}
+
+/* =============== 문의하기 페이지 =============== */
+.question_wrap
+{
+	padding: 40px 0px 0px 0px;
+}
+
+.question_wrap .title_wrap
+{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.question_wrap h2
+{
+	margin-bottom: 10px;
+}
+
+.question_wrap .btn_wrap
+{
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+.question_wrap .btn_wrap .btn
+{
+	background: #eee;
+	font-size: 14px;
+}
+
+.question_wrap .btn_wrap .btn:hover
+{
+	background: #6667ab;
+	color: #fff;
+}
+
+.table
+{
+	width: 100%;
+	background: #fff;
+}
+
+.column
+{
+	display: inline-block;
+	padding: 3px;
+	
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.thead
+{
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+}
+
+.tbody
+{
+	border-bottom: 1px solid #222;
+}
+
+.row
+{
+	width: 100%;
+}
+
+.tbody .row:hover
+{
+	background: #eee;
+}
+
+.thead .column
+{
+	text-align: center;
+}
+
+.column:first-child
+{
+	width: 50px;
+	text-align: center;
+}
+
+.column:nth-child(2) {
+	width: 50%;
+}
+
+.column:nth-child(3) {
+	width: 15%;
+	text-align: center;
+}
+
+.column:nth-child(4) {
+	width: 15%;
+}
+
+.column:nth-child(5) {
+	width: 10%;
+}
+
+.tbody .column:nth-child(4) {
+	text-align: center;
+}
+
+.tbody .column:nth-child(5) {
+	text-align: right;
+}
+
+/* ========== 글쓰기 ========== */
+.question_wrap
+{
+	width: 100%;
+}
+
+.question_wrap .btn_wrap
+{
+	text-align: right;
+	margin-top: 10px;
+}
+
+.question_wrap .content div
+{
+	padding-bottom: 10px;
+}
+
+.question_wrap .content span
+{
+	display: inline-block;
+	width: 100px;
+}
+
+.question_wrap .content p
+{
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.question_wrap input[type=text]
+{
+	width: 694px;
+	border: 1px solid #ddd;
+}
+
+.question_wrap textarea,
+.textarea
+{
+	width: 100%;
+	min-height: 300px;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+/* ========== 답변 ========== */
+.answer
+{
+	width: 95%;
+	background: #eee; 
+	padding: 30px;
+	margin: 40px auto;
+	border-radius: 10px;
+}
+
+.answer > div:first-child
+{
+	margin-bottom: 10px; 
+}
+
+
+/* =============== 공지사항 페이지 =============== */
+.notice_wrap01
+{
+	width:800px; 
+	height:80px;
+	line-height: 40px; 
+	padding:20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.notice_title
+{
+	width:540px; 
+	float:left;
+	font-size: 16px;
+	font-weight: bold;
+}
+.notice_date
+{
+	width:110px;
+	float:left;; 
+	margin:0 20px 0 30px;
+}
+
+.arrow_btn
+{
+	width:20px; 
+	height:20px;
+	margin-top: 10px;
+	background: url('/Ego_v.0.2/img/icon/arrow.png') no-repeat center center;
+	background-size: cover;
+	float:left;
+}
+
+.notice_view
+{
+	width:800px; 
+	height: 0;
+	overflow: hidden;
+	background: #fafafa;
+	border-radius: 0 0 10px 10px;
+}
+
+.notice_active
+{
+	width:800px; 
+	overflow: hidden;
+	padding: 20px;
+	margin-bottom: 10px;
+	background: #fafafa;
+	border-radius: 0 0 10px 10px;
+}
+
+/* =============== 테스트 페이지 =============== */
+.test_wrap
+{
+	width:800px;
+	margin:120px auto 0;
+	padding: 40px;
+}
+
+.test_wrap > div
+{
+	margin-bottom: 25px;
+}
+
+.test_image
+{
+	width:260px;
+	height:360px; 
+	display:inline-block;
+	background-color:orange;
+	margin-right: 30px;
+}
+
+.test_image img
+{
+	width:100%;
+	height:100%;
+}
+
+
+/* test_info */
+.test_info
+{
+	font-size: 16px;
+	display:inline-block;
+	width:420px;
+	vertical-align: top;
+}
+
+.info_category
+{
+	display: inline-block;
+	width:60px;
+	height:20px;
+	color: #fff;
+	text-align: center;
+	line-height: 20px;
+	margin-bottom:5px;
+	background: tomato;
+	border-radius: 20px;
+	
+	font-size:12px;
+	font-weight: bold;
+}
+.info_title
+{
+	
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	margin-bottom:5px;
+	font-size:25px;
+	text-align:center;
+}
+.info_joinmember
+{
+	
+	width:100%;
+	height:130px;
+	margin-bottom:5px;
+	font-size:45px;
+	text-align:center;
+}
+.start_btn
+{
+	
+	width: 100%;
+	height:50px;
+	line-height: 50px;
+	color: #fff;
+	margin-bottom:25px;
+	background-color:#282828;
+	
+	text-align:center;
+}
+.start_btn:hover
+{
+	background-color:#6667AB;
+}
+
+.test_button_box
+{
+	width:100%;
+	height:60px;
+	text-align: center;
+}
+
+.test_button_box > a
+{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	line-height: 50px;
+	background: #fff;
+	margin-right: 20px;
+}
+
+.test_button_box > a:first-child
+{
+	background: url('/Ego_v.0.2/img/icon/bookmark.png') no-repeat center center;
+	background-size: 80%;
+}
+
+.test_button_box > a:nth-child(2)
+{
+	background: url('/Ego_v.0.2/img/icon/recommend.png') no-repeat center center;
+	background-size: 60%;
+}
+
+.test_button_box > a:nth-child(3)
+{
+	background: url('/Ego_v.0.2/img/icon/smile.png') no-repeat center center;
+	background-size: 60%;
+}
+
+.test_button_box > a:last-child
+{
+	background: url('/Ego_v.0.2/img/icon/share.png') no-repeat center center;
+	background-size: 70%;
+	margin-right: 0;
+}
+
+/* 댓글 */
+		
+.reply_wrap
+{
+	width:100%;
+}
+
+.new_reply, .view_reply, .view_re_reply
+{
+	margin:0 auto;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	margin-bottom:15px;
+}
+
+.reply_box > div
+{
+	font-size: 14px;
+}
+		
+.reply_profile
+{
+	display:inline-block;
+	width:80px;
+	height:80px;
+	border-radius:50%;
+	background: url('/Ego_v.0.2/img/placeholder/profile.jpg') no-repeat center center;
+	background-size: cover;
+	vertical-align: top;
+}
+
+.reply_box
+{
+	display: inline-block;
+	width:90%;
+	max-width: 600px;
+	margin-left: 10px;
+	vertical-align: bottom;
+}
+
+.reply_name
+{
+	display:inline-block;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.reply_date
+{
+	display:inline-block;
+	padding: 5px;
+}
+
+.reply_box textarea
+{
+	width: 550px;
+	height: 50px;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.reply_box p
+{
+	display: inline-block;
+	width: 510px;
+	height: 50px;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 16px;
+	background: #fff;
+}
+
+.reply_box input[type=submit]
+{
+	display: inline-block;
+	width: 40px;
+	height: 50px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.reply_box a
+{
+	display: inline-block;
+	width: 40px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.reply_box a:nth-child(2)
+{
+	background: tomato;
+}
+
+.reply_box a:nth-child(3)
+{
+	background: #282828;
+}
+
+.reply_box input[type=submit]:hover
+{
+	background-color: #6667AB;
+	color: #fff;
+}
+
+.re_reply_btn
+{
+	padding: 5px;
+	cursor: pointer;
+}
+
+/* 대댓글 */
+.re_reply_wrap
+{
+	display: none;
+}
+
+.view_re_reply
+{
+	border: 1px solid #ddd;
+	width: 620px;
+	background: #fff;
+	float: right;
+}
+
+.view_re_reply .reply_box
+{
+	max-width: 500px;
+}
+
+.view_re_reply .reply_box textarea
+{
+	width: 450px;
+}
+
+.view_re_reply .reply_box p
+{
+	width: 410px;
+}
+
+/* =============== 테스트 진행 =============== */	
+.test_page_wrap
+{
+	width:100%;
+	padding: 0 40px 40px;
+}
+
+.test_progress_bar
+{
+	height:20px;
+	border: 1px solid #d97676;
+	border-radius: 10px;
+	margin-bottom:30px;
+	overflow: hidden;
+}
+
+.progress
+{
+	float: left;
+	width: 30%;
+	height:100%;
+	background: #d97676;
+}
+
+.test_question
+{
+	margin-bottom:30px;
+	height:300px;
+}
+
+.test_answer a
+{
+	display:inline-block;
+	width: 340px;
+	height: 100px;
+	line-height: 100px;
+	border: 1px solid #d97676;
+	border-radius: 20px;
+	
+	font-size:25px;
+	text-align:center;
+}
+
+.test_answer a:first-child
+{
+	margin-right: 30px;
+}
+
+.test_answer a:hover
+{
+	background: #d97676;
+	color: #fff;
+}
+
+/* =============== 테스트 결과 화면 =============== */	
+.result
+{
+	padding: 0 40px 40px;
+}
+
+.result .test_result
+{
+	width: 100%;
+}
+
+.test_btn
+{
+	height: 100px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.replay_btn
+{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	line-height: 50px;
+	background: #fff;
+	margin-left: 10px;
+	background: url('/Ego_v.0.2/img/icon/replay.png') no-repeat center center;
+	background-size: 70%;
+	
+	
+	position: absolute;
+	top: 20px;
+}
+
+.test_btn .test_button_box
+{
+	display: inline-block;
+	width: 50%;
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+
+.test_recommend
+{
+	position: relative;
+	padding: 15px;
+	margin-top: 30px;
+	border-top: 1px solid #ddd;
+}
+
+.test_recommend > div
+{
+	overflow: hidden;
+}
+
+.test_recommend .title
+{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.test_recommend
+{
+	position: relative;
+}
+
+.test_recommend ul
+{
+	display: inline-block;
+	width: 1500px;
+}
+
+.test_recommend li
+{
+	display: inline-block;
+	width: 150px;
+	margin-right: 10px;
+}
+
+.test_recommend img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.controller span
+{
+	position:absolute;
+	background-color: transparent;
+	color: black;
+	text-align: center;
+	padding: 10px 20px;
+	top: 50%;
+	cursor: pointer;
+}
+
+#slideShow
+{
+	width: 670px;
+	height: 210px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	/*리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은 hidden으로 숨겨줘야됨*/
+}
+
+.slides{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1000px; /* 슬라이드할 사진과 마진 총 넓이 */
+	transition: left 0.2s ease-out; /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+
+/* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child)
+{
+	float: left;
+}
+
+.slides li
+{
+	float: left;
+}
+
+.controller span
+{
+	top: 50%;
+	width: 8px;
+}
+
+.controller img
+{
+	width: 100%;
+}
+
+.prev
+{
+	left: -20px;
+}
+
+.next
+{
+	right: -20px;
+}
+
+/* =============== 회원 정보 =============== */	
+h3
+{
+	margin-bottom: 15px;
+}
+
+h3 span
+{
+	font-weight: lighter;
+	font-size: 12px;
+	color: #ddd;
+}
+
+.info_wrap
+{
+	 width:100%;
+	 padding:20px;
+}
+
+.user_profile
+{
+	background-color:white;
+	padding:15px;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	 
+	float:left;
+}
+
+.user_profile a
+{
+	display: block;
+	background-color:#eee;
+}
+
+.user_profile a:hover
+{
+	background-color:#282828;
+	color: #fff;
+}
+
+.user_profile img
+{
+	width:150px;
+	height:150px;
+	margin:0 auto 15px;
+	border-radius:150px;
+}
+
+.user_profile p
+{
+	 width:100%;
+	 line-height:30px;
+	 margin-bottom:15px;
+}
+
+.mod_btn,
+.logout_btn
+{
+	font-size: 14px;
+	width:120px;
+	padding: 5px 10px;
+	margin:0 auto 10px;
+	border-radius: 10px;
+}
+
+.logout_btn
+{
+	background: #fff;
+}
+
+.sec_btn
+{
+	font-size: 14px;
+	width:120px;
+	padding: 5px 10px;
+	margin:0 auto 10px;
+	border-radius: 10px;
+}
+
+.user_contents
+{
+	width:560px;
+	padding:15px;
+	background-color:#fff;
+	float:right;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+}
+
+.user_contents > p
+{
+	margin-left: 10px;
+	font-size: 14px;
+	color: #aaaaaa;
+}
+
+.user_contents > div
+{
+	position: relative;
+}
+
+.readonly
+{
+	background: #eee;
+}
+
+.user_contents .title,
+.keyword_wrap .title,
+.user_recommend .title,
+.user_record .title
+{
+	width:160px;
+	height:40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.user_contents a
+{
+	width:30px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.user_recommend,
+.user_record
+{
+	width:100%;
+	padding:15px;
+	background-color:#fff;
+	margin: 15px auto 0;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+}
+
+.user_recommend div,
+.user_record div
+{
+	margin-top: 10px;
+	width:100%;
+	text-align: center;
+}
+
+.user_recommend ul,
+.user_record ul
+{
+	position: relative;
+}
+
+.user_recommend ul:before,
+.user_record ul:before
+{
+	display: inline-block;
+	content: '';
+	width: 10px;
+	height: 20px;
+	vertical-align: middle;
+	cursor: pointer;
+	background: url('/Ego_v.0.2/img/icon/back_btn.png') no-repeat center center;
+	background-size: 70%;
+	
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+}
+
+.user_recommend ul:after,
+.user_record ul:after
+{
+	display: inline-block;
+	content: '';
+	width: 10px;
+	height: 20px;
+	vertical-align: middle;
+	cursor: pointer;
+	background: url('/Ego_v.0.2/img/icon/next_btn.png') no-repeat center center;
+	background-size: 70%;
+	
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+}
+
+.user_recommend li,
+.user_record li
+{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin-right: 10px;
+}
+
+.user_recommend li:last-child,
+.user_record li:last-child
+{
+	margin-right: 0;
+}
+
+.user_recommend a,
+.user_record a
+{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.modal_back
+{
+	display: none;
+	z-index: 9999;
+}
+
+.modal
+{
+	padding: 20px;
+	background: #fff;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal h3
+{
+	text-align: center;
+}
+
+.modal input[type=password]
+{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #ddd;
+	padding: 5px 10px;
+	margin-bottom: 15px;
+}
+
+.modal input[type=submit],
+.modal input[type=button]
+{
+	border-radius: 10px;
+	width: 100px;
+}
+
+.modal input[type=submit]
+{
+	background: #282828;
+	color: #fff;
+}
+
+.modal input[type=submit]:hover
+{
+	background: #6667AB;
+}
+
+.modal input[type=button]:hover
+{
+	background: #ddd;
+}
+
+/* =============== 예시 이미지 =============== */	
+.user_recommend li:first-child a
+{
+	background: url('/Ego_v.0.2/img/thumb/001.jpg') no-repeat center center;
+}
+
+.user_recommend li:nth-child(2) a
+{
+	background: url('/Ego_v.0.2/img/thumb/002.jpg') no-repeat center center;
+}
+
+.user_recommend li:nth-child(3) a
+{
+	background: url('/Ego_v.0.2/img/thumb/003.jpg') no-repeat center center;
+}
+
+.user_recommend li:nth-child(4) a
+{
+	background: url('/Ego_v.0.2/img/thumb/004.jpg') no-repeat center center;
+}
+
+.user_recommend li:nth-child(5) a
+{
+	background: url('/Ego_v.0.2/img/thumb/005.jpg') no-repeat center center;
+}
+
+.user_recommend li:nth-child(6) a
+{
+	background: url('/Ego_v.0.2/img/thumb/006.jpg') no-repeat center center;
+}
+
+.user_record li:first-child a
+{
+	background: url('/Ego_v.0.2/img/thumb/01.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.user_record li:nth-child(2) a
+{
+	background: url('/Ego_v.0.2/img/thumb/02.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.user_record li:nth-child(3) a
+{
+	background: url('/Ego_v.0.2/img/thumb/03.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.user_record li:nth-child(4) a
+{
+	background: url('/Ego_v.0.2/img/thumb/04.jpg') /Ego_v.0.2/peat center center;
+	background-size: cover;
+}
+
+.user_record li:nth-child(5) a
+{
+	background: url('/Ego_v.0.2/img/thumb/05.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.user_record li:nth-child(6) a
+{
+	background: url('/Ego_v.0.2/img/thumb/06.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+/* =============== 회원 정보 수정 =============== */	
+.user_profile img
+{
+	border-radius: 50%;
+}
+
+.user_profile #input_file
+{
+	display: none;
+}
+
+.user_profile .input_file_btn
+{
+	display: block;
+	width:120px;
+	background: #eee;
+	padding: 5px 10px;
+	margin:0 auto 10px;
+	border-radius: 10px;
+}
+
+.user_profile .input_file_btn:hover
+{
+	background: #282828;
+	color: #fff;
+}
+
+.user_profile .sec_btn
+{
+	font-size: 12px;
+	background: #fff;
+	color: #aaa;
+}
+
+.user_profile .sec_btn:hover
+{
+	background: #fff;
+	color: red;
+}
+
+.user_contents .keyword label
+{
+	background: #6667AB;
+	color: #fff;
+}
+
+.re_info > div
+{
+	padding: 10px;
+}
+
+.re_info span
+{
+	display: inline-block;
+	width: 120px;
+}
+
+.re_info input[type=text],
+.re_info input[type=password]
+{
+	width: 350px;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+}
+
+.re_info input[type=radio]
+{
+	width: 100px;
+}
+
+.keyword_wrap
+{
+	padding:15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	
+}
+
+.keyword label,
+.select_key label
+{
+	display: inline-block;
+	font-size: 14px;
+	min-width: 130px;
+	padding: 5px;
+	background: #eee;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.select_key
+{
+	margin-bottom: 20px;
+}
+
+.select_key label
+{
+	min-width: 130px;
+	background: #6667AB;
+	color: #fff;
+	
+	display: none;
+}
+
+.keyword label:hover
+{
+	background: #282828;
+	color: #fff;
+}
+
+.keyword input[type=checkbox],
+.keyword input[type=radio]
+{
+	display: none;
+}
+
+.key input[type=checkbox]:checked + label
+{
+	background: #6667AB;
+	color: #fff;
+}
+
+.key input[type=checkbox]:checked 
+{
+	background: #6667AB;
+	color: #fff;
+}
+
+.mbti label
+{
+	min-width: 165px;
+}
+
+.mbti input[type=radio]:checked + label
+{
+	background: #6667AB;
+	color: #fff;
+}
+
+.keyword_wrap .keywords > div
+{
+	cursor: pointer;
+}
+
+.keyword_wrap .keywords > div:hover
+{
+	background: #282828;
+}
+
+.keywords .select
+{
+	background: #282828;
+}
+
+.re_info_btn
+{
+	min-width: 90px;
+	padding: 5px 10px;
+	color: #fff;
+	background: #282828;
+	border-radius: 10px;
+	float: right;
+	margin-right: 20px;
+}
+
+.re_info_btn:hover
+{
+	background: #6667AB;
+}

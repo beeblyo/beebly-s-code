@@ -1,0 +1,65 @@
+package ego.vo;
+import java.util.*;
+public class HashtagVO 
+{
+
+/****************************해시태그******************************/
+	
+	String[] hashtags = 
+	{"자연","공포","스릴","추리","일상","건강","학업","취미","음식","미래","랜덤",
+	"운세","초현실적","연애","유머","닮은꼴","주변인","음악","영화","게임","날씨",
+	"색상","과학","문학","여행","역사","철학","금융","우주","지리","IT",
+	"이론","댄스","유명인","디자인","인테리어","잠","습관","음주","시간","감정",
+	"신체","휴식","직업","규칙"
+	};
+	
+	
+	//**Arrays.asList는 고정된 객체로 구성할 수 있다**//
+	List<String> list = Arrays.asList(hashtags);
+	public void setHash(int i,String values)
+	{
+		if(list != null && list.isEmpty() == false)
+		{
+			list.set(i, values);
+		}else
+		{
+			System.out.println("해당 번호에 값이 없거나 null 입니다.");
+		}
+	}
+
+	public String getHash(int i)
+	{
+		String value = "";
+		if(list != null && list.isEmpty() == false)
+		{
+			value = list.get(i);
+		}else
+		{
+			return "해당 번호에 값이 없거나 null 입니다.";
+		}
+		return value;
+	}
+	
+	public void HashInfo()
+	{
+		System.out.println("===키워드 목록===");
+		for(int i =0; i<list.size(); i++)
+		{
+			System.out.println(i + " : " + list.get(i));
+		}
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		
+		//***************해시태그 세팅*****************//
+		HashtagVO key = new HashtagVO();
+		//key.setHash(0, "역사");
+		//key.setHash(1, "정치");
+		//String val = key.getHash(0);
+		//String val2 = key.getHash(1);
+		key.HashInfo();
+	}
+
+}

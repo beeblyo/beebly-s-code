@@ -1,0 +1,275 @@
+	<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Ego_join</title>
+		<link href="/Ego_v.0.2/css/base.css" rel="stylesheet">        <!-- 공통 스타일 		-->
+		<link href="/Ego_v.0.2/css/login.css" rel="stylesheet">       <!-- admin 스타일	-->
+		<script src="/Ego_v.0.2/js/jquery-3.6.0.js"></script>         <!-- 제이쿼리 		-->
+		<script src="/Ego_v.0.2/js/script.js" defer="defer"></script> <!-- 공통 스트립트 		-->
+		<script src="/Ego_v.0.2/js/join.js" defer="defer"></script>   <!-- join 스트립트 	-->
+		<link href="/Ego_v.0.2/css/animation.css" rel="stylesheet">   <!-- animation	-->
+	</head>
+	<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+	<body>
+		<div class="join wrap">
+			<form class="join_form" name="join" method="post" action="joinok.jsp" onsubmit="return confirm('가입하시겠습니까?');" >
+				<h1>
+					<a class="b_logo" href="/Ego_v.0.2/index.jsp"></a>
+				</h1>
+				<div class="join_wrap">
+					<a class="back_btn" href="javascript:back();">◀</a>
+					
+					<div id="step01" class="assent_wrap">
+						<div class="assent">
+							
+						</div>
+						
+						<div class="center">
+							<input id="assentY" type="radio" name="assent" value="Y"><label for="assentY">동의합니다.</label>
+							<input id="assentN" type="radio" name="assent" value="N"><label for="assentN">동의하지 않습니다.</label><br>
+							
+							<div class="btn_wrap">
+								<input class="next_btn btn" type="button" value="다음" onclick="formCheck(1);">
+							</div>
+						</div>
+					</div>
+					
+					<div id="step02" class="info_wrap">
+						<p>
+							<input type="text" id="id" name="id" placeholder="아이디"> @
+							<select id="email" name="email">
+								<option value="naver.com">naver.com
+								<option value="gmail.com">gmail.com
+								<option value="daum.com">daum.com
+							</select>
+						</p>
+						<p><input type="text" id="mailnumber" name="mailnumber" placeholder="인증번호"></p>
+						
+						<div class="center btn_wrap">
+							<input class="certify_btn btn" type="button" value="인증번호 발송" onclick="formCheck(2);">
+							<input class="next_btn btn" type="button" value="다음" onclick="formCheck(2);">
+						</div>
+					</div>
+				
+					<div id="step03" class="info_wrap">
+						<p><input type="password" id="pw" name="pw" placeholder="비밀번호"></p>
+						<p><input type="password" id="pwcheck" name="pwcheck" placeholder="비밀번호확인"></p>
+						<p><input type="text" id="nickname" name="nickname" placeholder="닉네임"></p>
+						<p class="genders center">
+							<label><input type="radio" class="gender" name="gender" value="M" checked="checked">남</label>
+							<label><input type="radio" class="gender" name="gender" value="F">여</label>
+						</p>
+						<p>
+							<select name="birth1">
+							   <option value="2022">2022</option>
+							   <option value="2021">2021</option>
+						       <option value="2020">2020</option>
+							   <option value="2019">2019</option>
+						       <option value="2018">2018</option>
+						       <option value="2017">2017</option>
+						       <option value="2016">2016</option>
+						       <option value="2015">2015</option>
+						       <option value="2014">2014</option>
+						       <option value="2013">2013</option>
+						       <option value="2012">2012</option>
+						       <option value="2011">2011</option>
+						       <option value="2010">2010</option>
+						       <option value="2009">2009</option>
+						       <option value="2008">2008</option>
+						       <option value="2007">2007</option>
+						       <option value="2006">2006</option>
+						       <option value="2005">2005</option>
+						       <option value="2004">2004</option>
+						       <option value="2003">2003</option>
+						       <option value="2002">2002</option>
+						       <option value="2001">2001</option>
+						       <option value="2000">2000</option>
+						       <option value="1999">1999</option>
+						       <option value="1998">1998</option>
+						       <option value="1997">1997</option>
+						       <option value="1996">1996</option>
+						       <option value="1995">1995</option>
+						       <option value="1994">1994</option>
+						     </select>년&nbsp;
+						     <select name="birth2">
+						       <option value="1">1</option>
+						       <option value="2">2</option>
+						       <option value="3">3</option>
+						       <option value="4">4</option>
+						       <option value="5">5</option>
+						       <option value="6">6</option>
+						       <option value="7">7</option>
+						       <option value="8">8</option>
+						       <option value="9">9</option>
+						       <option value="10">10</option>
+						       <option value="11">11</option>
+						       <option value="12">12</option>
+						     </select>월&nbsp;
+						     <select name="birth3">
+						       <option value="1">1</option>
+						       <option value="2">2</option>
+						       <option value="3">3</option>
+						       <option value="4">4</option>
+						       <option value="5">5</option>
+						       <option value="6">6</option>
+						       <option value="7">7</option>
+						       <option value="8">8</option>
+						       <option value="9">9</option>
+						       <option value="10">10</option>
+						       <option value="11">11</option>
+						       <option value="12">12</option>
+						       <option value="13">13</option>
+						       <option value="14">14</option>
+						       <option value="15">15</option>
+						       <option value="16">16</option>
+						       <option value="17">17</option>
+						       <option value="18">18</option>
+						       <option value="19">19</option>
+						       <option value="20">20</option>
+						       <option value="21">21</option>
+						       <option value="22">22</option>
+						       <option value="23">23</option>
+						       <option value="24">24</option>
+						       <option value="25">25</option>
+						       <option value="26">26</option>
+						       <option value="27">27</option>
+						       <option value="28">28</option>
+						       <option value="29">29</option>
+						       <option value="30">30</option>
+						       <option value="31">31</option>
+						     </select>일<br><br>
+						</p>
+	
+						<div class="center btn_wrap">
+							<input class="next_btn btn" type="button" value="다음" onclick="formCheck(3);">
+						</div>
+					</div>
+			
+					<div id="step04" class="keyword">
+						<h3>키워드<span> (선택사항)</span></h3>
+						<div class="key">
+							<input id="key_01" name="keyword" type="checkbox" value="001">
+							<label for="key_01">재미있는</label>
+							
+							<input id="key_02" name="keyword" type="checkbox" value="002">
+							<label for="key_02">자존심쎈</label>
+							
+							<input id="key_03" name="keyword" type="checkbox" value="003">
+							<label for="key_03">게으른</label>
+							
+							<input id="key_04" name="keyword" type="checkbox" value="004">
+							<label for="key_04">활발한</label>
+							
+							<input id="key_05" name="keyword" type="checkbox" value="005">
+							<label for="key_05">똑똑한</label>
+							
+							<input id="key_06" name="keyword" type="checkbox" value="006">
+							<label for="key_06">스릴있는</label>
+							
+							<input id="key_07" name="keyword" type="checkbox" value="007">
+							<label for="key_07">차분한</label>
+							
+							<input id="key_08" name="keyword" type="checkbox" value="008">
+							<label for="key_08">방콕</label>
+							
+							<input id="key_09" name="keyword" type="checkbox" value="009">
+							<label for="key_09">귀여운</label>
+							
+							<input id="key_10" name="keyword" type="checkbox" value="010">
+							<label for="key_10">느긋한</label>
+							
+							<input id="key_11" name="keyword" type="checkbox" value="011">
+							<label for="key_11">고집쎈</label>
+							
+							<input id="key_12" name="keyword" type="checkbox" value="012">
+							<label for="key_12">사랑스러운</label>
+							
+							<input id="key_13" name="keyword" type="checkbox" value="013">
+							<label for="key_13">행복한</label>
+							
+							<input id="key_14" name="keyword" type="checkbox" value="014">
+							<label for="key_14">착실한</label>
+							
+							<input id="key_15" name="keyword" type="checkbox" value="015">
+							<label for="key_15">온화한</label>
+							
+							<input id="key_16" name="keyword" type="checkbox" value="016">
+							<label for="key_16">키보드워리어</label>
+							
+							<input id="key_17" name="keyword" type="checkbox" value="017">
+							<label for="key_17">파티피플</label>
+							
+							<input id="key_18" name="keyword" type="checkbox" value="018">
+							<label for="key_18">현실적인</label>
+							
+							<input id="key_19" name="keyword" type="checkbox" value="019">
+							<label for="key_19">즉흥적인</label>
+							
+							<input id="key_20" name="keyword" type="checkbox" value="020">
+							<label for="key_20">창의적인</label>
+						</div>
+		
+						<h3>MBTI<span> (선택사항)</span></h3>
+						<div class="mbti">
+							<input id="mbti_01" type="radio" name="mbti" value="ESFP">
+							<label for="mbti_01">ESFP</label>
+							
+							<input id="mbti_02" type="radio" name="mbti" value="ESFJ">
+							<label for="mbti_02">ESFJ</label>
+							
+							<input id="mbti_03" type="radio" name="mbti" value="ESTP">
+							<label for="mbti_03">ESTP</label>
+							
+							<input id="mbti_04" type="radio" name="mbti" value="ESTJ">
+							<label for="mbti_04">ESTJ</label>
+							
+							<input id="mbti_05" type="radio" name="mbti" value="ENFP">
+							<label for="mbti_05">ENFP</label>
+							
+							<input id="mbti_06" type="radio" name="mbti" value="ENFJ">
+							<label for="mbti_06">ENFJ</label>
+							
+							<input id="mbti_07" type="radio" name="mbti" value="ENTP">
+							<label for="mbti_07">ENTP</label>
+							
+							<input id="mbti_08" type="radio" name="mbti" value="ENTJ">
+							<label for="mbti_08">ENTJ</label>
+							
+							<input id="mbti_09" type="radio" name="mbti" value="ISFP">
+							<label for="mbti_09">ISFP</label>
+							
+							<input id="mbti_10" type="radio" name="mbti" value="ISFJ">
+							<label for="mbti_10">ISFJ</label>
+							
+							<input id="mbti_11" type="radio" name="mbti" value="ISTP">
+							<label for="mbti_11">ISTP</label>
+							
+							<input id="mbti_12" type="radio" name="mbti" value="ISTJ">
+							<label for="mbti_12">ISTJ</label>
+							
+							<input id="mbti_13" type="radio" name="mbti" value="INFP">
+							<label for="mbti_13">INFP</label>
+							
+							<input id="mbti_14" type="radio" name="mbti" value="ISFJ">
+							<label for="mbti_14">INFJ</label>
+							
+							<input id="mbti_15" type="radio" name="mbti" value="ISTP">
+							<label for="mbti_15">ISTP</label>
+							
+							<input id="mbti_16" type="radio" name="mbti" value="INTJ">
+							<label for="mbti_16">INTJ</label>
+						</div>
+						<!-- 메인화면으로 바로 이동 jsp작업할 때 redirect 쓰자 -->
+						<div class="center btn_wrap">
+							<input class="btn" type="submit" value="회원가입 완료">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+	<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+</html>

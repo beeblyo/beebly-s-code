@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../config/config.jsp"%>
+<%
+request.setCharacterEncoding("euc-kr");
+UserVO login = (UserVO)session.getAttribute("login");
+String t_no = request.getParameter("no");
+
+BookmarkDTO dto = new BookmarkDTO();
+
+if(dto.bookmarkInsert(t_no,login.getNo()))
+{
+	out.print("TRUE");
+} else
+{
+	dto.bookmarkDelete(t_no,login.getNo());
+	out.print("FALSE");
+}
+%>

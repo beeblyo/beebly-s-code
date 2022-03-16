@@ -1,0 +1,323 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<main>
+	<div class="backward_wrap">
+		<div class="back_btn">
+			<a href="/Ego_v.0.2/index.jsp" title="메인으로"></a>
+		</div>
+	</div>
+	
+	<div class="result">
+		<div>
+			<div class="test_result">
+			</div>
+			
+			<div class="test_btn">
+				<a class="replay_btn" href="./test.jsp" title="다시하기"></a>
+				<div class="test_button_box">
+					<a href="#" title="즐겨찾기"></a>
+					<a href="#" title="잘맞아요"></a>
+					<a href="#" title="재밌어요"></a>
+					<a href="#" title="공유하기"></a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 댓글 입력 영역 -->
+		<div class="reply_wrap">
+			<div class="reply new_reply">
+				<div class="reply_profile">
+				</div>
+				<div class="reply_box">
+					<div>
+						<div class="reply_name">에고고</div>
+						<div class="reply_date">2021.01.01</div>
+					</div>
+					<form name="reply" method="post" action="#">
+						<textarea name="post"></textarea>
+						<input type="submit" value="등록">
+					</form>
+				</div>
+			</div>
+			<!-- 댓글 뷰 영역 -->
+			<div>
+				<div class="reply view_reply">
+					<div class="reply_profile">
+					</div>
+					<div class="reply_box">
+						<div>
+							<div class="reply_name">에고고</div>
+							<div class="reply_date">2021.01.01</div>
+						</div>
+						<div>
+							<p>
+								재미있는데 왜 댓글이 없지
+							</p>
+							<a>수정</a>
+							<a>삭제</a>
+						</div>
+						<div class="re_reply_btn" onclick="ToggleReply(this);">└댓글(2)</div>
+					</div>
+				</div>
+				<!-- 대댓글 뷰 영역 -->
+				<div id="re_reply_wrap" class="re_reply_wrap clearfix">
+					<div class="reply view_re_reply">
+						<div class="reply_profile">
+						</div>
+						<div class="reply_box">
+							<div>
+								<div class="reply_name">이고에고</div>
+								<div class="reply_date">2021.01.01</div>
+							</div>
+							<div>
+								<p>
+									그러게 말이에요!
+								</p>
+								<a>수정</a>
+								<a>삭제</a>
+							</div>
+						</div>
+					</div>
+					<div class="reply view_re_reply">
+						<div class="reply_profile">
+						</div>
+						<div class="reply_box">
+							<div>
+								<div class="reply_name">에고라니</div>
+								<div class="reply_date">2021.01.01</div>
+							</div>
+							<div>
+								<p>
+									댓글 만들기 룰루
+								</p>
+								<a>수정</a>
+								<a>삭제</a>
+							</div>
+						</div>
+					</div>
+					<!-- 대댓글 입력 영역 -->
+					<div class="reply view_re_reply">
+						<div class="reply_profile">
+						</div>
+						<div class="reply_box">
+							<div>
+								<div class="reply_name">에고라니</div>
+								<div class="reply_date">2021.01.01</div>
+							</div>
+							<form name="reply" method="post" action="#">
+								<textarea name="post"></textarea>
+								<input type="submit" value="등록">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 댓글 영역 -->
+			<div>
+				<div class="reply view_reply">
+					<div class="reply_profile">
+					</div>
+					<div class="reply_box">
+						<div>
+							<div class="reply_name">심리</div>
+							<div class="reply_date">2021.01.01</div>
+						</div>
+						<div>
+							<p>
+								재미있어요
+							</p>
+							<a>수정</a>
+							<a>삭제</a>
+						</div>
+						<div class="re_reply_btn" onclick="ToggleReply(this);">└댓글(1)</div>
+					</div>
+				</div>
+				<div id="re_reply_wrap" class="re_reply_wrap clearfix">
+					<div class="reply view_re_reply">
+						<div class="reply_profile">
+						</div>
+						<div class="reply_box">
+							<div>
+								<div class="reply_name">이고에고</div>
+								<div class="reply_date">2021.01.01</div>
+							</div>
+							<div>
+								<p>
+									친구한테 소개 하러 갑니다!
+								</p>
+								<a>수정</a>
+								<a>삭제</a>
+							</div>
+						</div>
+					</div>
+					<!-- 대댓글 입력 영역 -->
+					<div class="reply view_re_reply">
+						<div class="reply_profile">
+						</div>
+						<div class="reply_box">
+							<div>
+								<div class="reply_name">에고라니</div>
+								<div class="reply_date">2021.01.01</div>
+							</div>
+							<form name="reply" method="post" action="#">
+								<textarea name="post"></textarea>
+								<input type="submit" value="등록">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="reply view_reply">
+					<div class="reply_profile">
+					</div>
+					<div class="reply_box">
+						<div>
+							<div class="reply_name">심리</div>
+							<div class="reply_date">2021.01.01</div>
+						</div>
+						<div>
+							<p>
+								재미있어요
+							</p>
+							<a>수정</a>
+							<a>삭제</a>
+						</div>
+						<div class="re_reply_btn" onclick="ToggleReply(this);">└댓글(0)</div>
+					</div>
+				</div>
+				<div id="re_reply_wrap" class="re_reply_wrap clearfix">
+					<!-- 대댓글 입력 영역 -->
+					<div class="reply view_re_reply">
+						<div class="reply_profile">
+						</div>
+						<div class="reply_box">
+							<div>
+								<div class="reply_name">에고라니</div>
+								<div class="reply_date">2021.01.01</div>
+							</div>
+							<form name="reply" method="post" action="#">
+								<textarea name="post"></textarea>
+								<input type="submit" value="등록">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="reply view_reply">
+					<div class="reply_profile">
+					</div>
+					<div class="reply_box">
+						<div>
+							<div class="reply_name">심리</div>
+							<div class="reply_date">2021.01.01</div>
+						</div>
+						<div>
+							<p>
+								재미있어요
+							</p>
+							<a>수정</a>
+							<a>삭제</a>
+						</div>
+						<div class="re_reply_btn" onclick="ToggleReply(this);">└댓글(0)</div>
+					</div>
+				</div>
+				<div id="re_reply_wrap" class="re_reply_wrap clearfix">
+					<!-- 대댓글 입력 영역 -->
+					<div class="reply view_re_reply">
+						<div class="reply_profile">
+						</div>
+						<div class="reply_box">
+							<div>
+								<div class="reply_name">에고라니</div>
+								<div class="reply_date">2021.01.01</div>
+							</div>
+							<form name="reply" method="post" action="#">
+								<textarea name="post"></textarea>
+								<input type="submit" value="등록">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="reply view_reply">
+					<div class="reply_profile">
+					</div>
+					<div class="reply_box">
+						<div>
+							<div class="reply_name">심리</div>
+							<div class="reply_date">2021.01.01</div>
+						</div>
+						<div>
+							<p>
+								재미있어요
+							</p>
+							<a>수정</a>
+							<a>삭제</a>
+						</div>
+						<div class="re_reply_btn" onclick="ToggleReply(this);">└댓글(0)</div>
+					</div>
+				</div>
+				<div id="re_reply_wrap" class="re_reply_wrap clearfix">
+					<!-- 대댓글 입력 영역 -->
+					<div class="reply view_re_reply">
+						<div class="reply_profile">
+						</div>
+						<div class="reply_box">
+							<div>
+								<div class="reply_name">에고라니</div>
+								<div class="reply_date">2021.01.01</div>
+							</div>
+							<form name="reply" method="post" action="#">
+								<textarea name="post"></textarea>
+								<input type="submit" value="등록">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+			<div class="paging">
+				<ul>
+					<li><a href="#">◀</a></li>
+					<li><a href="#" class="now">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>
+					<li><a href="#">▶</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="test_recommend">
+			<p class="title">비슷한 테스트</p>
+			<div>
+				<ul>
+					<li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/08.jpg"></a></li>
+			        <li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/06.jpg"></a></li>
+			        <li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/03.jpg"></a></li>
+			        <li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/04.jpg"></a></li>
+			        <li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/05.jpg"></a></li>
+			        <li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/02.jpg"></a></li>
+			        <li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/07.jpg"></a></li>
+			        <li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/01.jpg"></a></li>
+			    	<li><a href="./test.jsp"><img src="/Ego_v.0.2/img/thumb/09.jpg"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</main>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="../include/footer.jsp" %>

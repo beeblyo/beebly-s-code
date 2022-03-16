@@ -1,0 +1,102 @@
+package ego.dto;
+import DB.*;
+import VO.TestVO;
+
+public class TestDTO extends DBManager
+{
+	//******************테스트를 등록한다******************************//
+	public boolean testInsert(TestVO vo)
+	{
+		if(DBOpen() == false) return false;
+		String sql  = "";
+		sql += "insert into test (t_title,t_foldername,t_hashtag) ";
+		sql += "values (";
+		sql += "'" + vo.getTestTitle().replace("'","") + "',";
+		sql += "'" + vo.getFoldername() + "',";		
+		sql += "'" + vo.getHashtag() + "')";
+		RunSQL(sql);
+		return true;
+	}
+	
+	//******************테스트를 삭제한다******************************//
+	public void testDelete(TestVO vo)
+	{
+		if(DBOpen() == true) 
+		{
+			String sql  = "";
+			sql += "DELETE FROM test WHERE t_no = " + vo.getTestNumber();
+			RunSQL(sql);
+		}
+	}
+	
+	//******************테스트 제목,폴더명을 업데이트 한다******************************//
+	public boolean testUpdate(TestVO vo)
+	{
+		//브라우저에서 넣을 input 값 변수명
+		String newTitleName = "";
+		String newFolerName = "";
+		if ( DBOpen() == false ) {return false;}
+		String sql = "";
+		sql += "UPDATE test ";
+		sql += "SET t_title = '" + newTitleName.replace("'", "") + "',";
+		sql += "t_foldername = '" + newFolerName + "' ";
+		sql += "WHERE t_no = " + vo.getTestNumber();
+		RunSQL(sql);
+		return true;
+	}
+	
+	//******test를 목록을 최신순으로 보여준다(테스트 제목, 참여수, 폴더명)*********************//
+	public boolean selectTestIndex(TestVO vo)
+	{
+		if( DBOpen() == false) {return false;}
+		String sql = "";
+		sql += "SELECT t_title,t_rjoincount,t_foldername ";
+		sql += "FROM test ";
+		sql += "order by t_no desc";
+		OpenQuery(sql);
+		if (this.GetNext() == false)
+		{
+			this.CloseQuery();
+			this.DBClose();	
+		}
+		
+		return true;
+	}
+	
+	//****test시작-결과 화면을 조회한다 (테스트 제목, 참여수, 폴더명, 해시태그, 게시일 )********/
+	public boolean selectTestView(TestVO vo)
+	{
+		if( DBOpen() == false) {return false;}
+		String sql = "";
+		sql += "SELECT t_title,t_rjoincount,t_foldername,t_hashtag,t_postdate ";
+		sql += "FROM test ";
+		sql += "WHERE t_no = " + vo.getTestNumber();
+		OpenQuery(sql);
+		if (this.GetNext() == false)
+		{
+			this.CloseQuery();
+			this.DBClose();	
+		}
+		
+		return true;
+	}
+	
+	/********************테스트 조회수를 증가시킨다***********************/
+	public boolean upJoinCount(TestVO vo)
+	{
+		if( DBOpen() == false) {return false;}
+		String sql = "";
+		
+		sql = "UPDATE test ";
+		sql += "SET t_rjoincount = t_rjoincount + 1 ";
+		sql += "WHERE t_no = " + vo.getTestNumber();
+		RunSQL(sql);
+		return true;
+	}
+	
+	public static void main(String[] args) 
+	{
+		/***********데이터베이스 연결 종료는 tail에서*************/
+	}
+
+}

@@ -1,0 +1,215 @@
+/* top slide */
+.slide_wrap
+{
+	height: 450px;
+	background: #eee;
+	margin-top: 80px;
+}
+
+/* wrap */
+.wrap{
+	position:relative;
+	z-index:9;
+
+	width:90%; min-width:1100px;
+	background-color:white;
+	margin:0 auto;
+	padding:15px 10px 30px;
+}
+
+/* =============== search_box =============== */
+.search_box
+{
+	width:520px;
+	margin:0 auto;
+	padding: 40px 0px;
+}
+
+.search_box form
+{
+	font-size: 0;
+}
+
+form > input
+{
+	display:inline-block; 
+
+	font-size: 16px;
+	line-height: 45px;
+}
+
+form > input:nth-child(1)
+{
+	z-index: 10;
+
+	width:90%;
+	padding-left: 10px;
+	border:1px solid #DBDCDD;
+	border-radius: 5px 0px 0px 5px;
+} 
+
+form > input:nth-child(2)
+{
+	position: relative; 
+
+	background-color: #165B8E;
+	padding: 0 5px;
+	border-radius: 0px 5px 5px 0px;
+
+	color: white;
+	text-align: center;
+	font-weight: 700;
+
+	cursor: pointer;
+}
+
+form > input:nth-child(2):hover
+{
+	background: #6E2DA0;
+}
+
+/* =============== search =============== */
+.keyword
+{
+	display: none;
+	
+	text-align: center;
+	font-size: 26px;
+	font-weight: lighter;
+}
+
+.keyword b
+{
+	margin-bottom: 30px;
+	
+	color: #165B8E;
+}
+
+/* =============== view =============== */
+.infinity h3
+{
+	font-size: 20px;
+	text-align: center;
+}
+
+.view_cal_btn 
+{
+	position:relative;
+
+	padding:40px 0px;
+
+	font-weight: 700;
+}
+.view_cal_btn > a
+{
+	color:#1C6091 !important;	
+	font-size: 22px;
+}
+
+.view_cal_btn > a:hover
+{
+	border-bottom: 1px solid #1C6091;
+}
+
+.view_cal_btn a img
+{
+	vertical-align: top;
+	margin-right: 5px;
+}
+
+
+
+/* ===== content ===== */
+.content_wrap
+{
+	width: 80%;
+	margin: 0 auto;
+
+	text-align: left;
+	overflow: auto;
+}
+
+.content_box
+{
+	position: relative;
+
+	display: inline-block;
+	width: 240px; height: 380px;
+	margin: 40px 10px 40px 0;
+	border: 1px solid #DBDCDD;
+	border-radius: 3px;
+}
+
+.content_box > div
+{
+	position:absolute;
+	bottom:0px; left:0px;
+
+	width: 100%; height:80px;
+	background-color: #FFFFFF;
+	padding:20px 10px;
+	
+	font-weight:700;
+	text-align:left;
+}
+
+.content_box > div:first-child {
+	top: 0;
+	height: 100%;
+	padding: 0;
+}
+
+.content_box > div .img {
+	width: 100%;
+	height: 100%;
+	background: url("/Yogijogi_v.0.2/img/festival.png") no-repeat center;
+	background-size: cover;
+}
+
+
+.content_box > div > div > a
+{
+	color:#165B8E !important;
+	font-size:18px !important; 
+}
+
+.content_box:hover > .content_info
+{
+	height:100px;
+
+	transition:0.3s;
+}
+
+.content_box > div > div:nth-child(2)
+{
+	color:#808080 !important;
+	font-size:12px; 
+}
+
+.list_btn
+{
+	position: absolute;
+	right: 10px;
+	top: 20px;
+
+	display: inline-block;
+	width: 40px; height: 40px;
+	background-image: url("/Yogijogi_v.0.2/img/bookmark.png");
+
+	text-align: center;
+	line-height: 40px;
+	
+	z-index: 100;
+}
+
+.check
+{
+	background-image: url("/Yogijogi_v.0.2/img/selected_bookmark.png");
+}
+
+.list_btn:hover 
+{
+	background-image: url("/Yogijogi_v.0.2/img/selected_bookmark.png");
+
+	cursor: pointer;
+}

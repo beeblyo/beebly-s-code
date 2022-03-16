@@ -1,0 +1,86 @@
+package ego.vo;
+
+import java.util.*;
+import vo.*;
+public class hashtag 
+{
+	String original_keywords = 
+	"00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 010, "
+	+ "011, 012, 013, 014, 015, 016, 017, 018, 019, 020, "
+	+ "021, 022, 023, 024, 025, 026, 027, 028, 029, 030, "
+	+ "031, 032, 033, 034, 035, 036, 037, 038, 039, 040, ";
+	
+	String[] keywords = 
+	{"000","001","002","003","004","005","006","007","008","009","010",
+	"011","012","013","014","015","016","017","018","019","020",
+	"021","022","023","024","025","026","027","028","029","030",
+	"031","032","033","034","035","036","037","038","039","040"
+	};
+	
+	//**Arrays.asList는 고정된 객체로 구성할 수 있다**//
+	List<String> list = Arrays.asList(keywords);
+	public void setKeyword(int i,String values)
+	{
+		if(list != null && list.isEmpty() == false)
+		{
+			list.set(i, values);
+		}else
+		{
+			System.out.println("해당 번호에 값이 없거나 null 입니다.");
+		}
+	}
+
+	public String getKeyword(int i)
+	{
+		String value = "";
+		if(list != null && list.isEmpty() == false)
+		{
+			value = list.get(i);
+		}else
+		{
+			return "해당 번호에 값이 없거나 null 입니다.";
+		}
+		return value;
+	}
+	
+	public void keywordInfo()
+	{
+		System.out.println("===키워드 목록===");
+		for(int i =0; i<list.size(); i++)
+		{
+			System.out.println(i + " : " + list.get(i));
+		}
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		
+		//***************키워드 세팅*****************//
+		hashtag key = new hashtag();
+		key.setKeyword(0, "역사");
+		key.setKeyword(1, "정치");
+		String val = key.getKeyword(0);
+		String val2 = key.getKeyword(1);
+		//System.out.println(val);
+		key.keywordInfo();
+		
+		//******Test vo값에 키워드 세팅(집어넣기)********//
+		TestVO tvo = new TestVO();
+		tvo.setHashtag(val,val2);
+		tvo.PrintHashInfo();
+		
+		String[] v = tvo.getHashtag();
+		
+		for(int i =0; i<=v.length-1; i++)
+		{	
+			System.out.println(" V = " + v[i]);
+		}
+		
+		/******vo에 집어넣은 값 sql insert위해 배열을 String으로 만들기********/
+		String joined_ary = String.join(",",v);
+		System.out.println(joined_ary);
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="./include/header.jsp" %>
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<main>
+	<div class="wrap">
+		<div class="backward_wrap">
+			<div class="back_btn">
+				<a href="index.jsp"></a>
+			</div>
+		</div>
+		<div class="que_mail_wrap">
+			<div class="que_email_wrap">
+				<input class="que_email" type="text" placeholder="이메일">
+			</div>
+			<div class="que_title_wrap">
+				<input class="que_title" type="text" placeholder="문의 메일 제목">
+			</div>
+			<div class="que_contents_wrap">
+				<textarea class="que_contents" placeholder="문의 메일 내용"></textarea>
+			</div>
+			<div class="que_btn_wrap">
+				<input class="que_btn" type="button" value="보내기">
+			</div>
+		</div>
+	</div>
+</main>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="./include/footer.jsp" %>

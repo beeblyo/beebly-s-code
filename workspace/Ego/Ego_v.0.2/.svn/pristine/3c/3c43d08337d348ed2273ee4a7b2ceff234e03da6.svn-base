@@ -1,0 +1,54 @@
+package ego.dto;
+
+import ego.dbms.DBManager;
+import ego.vo.BookmarkVO;
+
+public class BookmarkDTO extends DBManager
+{
+	String sql= "";
+	//******************북마크를 등록한다******************************//
+	public boolean bookkmarkInsert(BookmarkVO vo)
+	{
+		if(DBOpen() == false) return false;
+		sql  = "";
+		sql += "insert into bookmark (t_no,bm_date) ";
+		sql += "values (" + vo.getTest_Number() +",'" + vo.getBm_Date() + "')";
+		RunSQL(sql);
+		return true;
+	}
+	
+	
+	
+	//******************북마크를 삭제한다******************************//
+	public void categoryDelete(BookmarkVO vo)
+	{
+		if(DBOpen() == true) 
+		{
+			sql  = "";
+			sql += "DELETE FROM category WHERE bm_no = " + vo.getBm_Date();
+			RunSQL(sql);
+		}
+	}
+	
+	
+	//******************북마크를 조회한다******************************//
+	public boolean categoryIndex(BookmarkVO vo)
+	{
+		if( DBOpen() == false) {return false;}
+		while (GetNext() == true)
+		{
+			sql = "";
+			sql += "SELECT bm_no ";
+			sql += "FROM bookmark ";
+			sql += "WHERE bm_no = " + vo.getBm_Date();
+		}
+		OpenQuery(sql);
+		return true;
+	}
+	
+	public static void main(String[] args) 
+	{
+		
+	}
+
+}

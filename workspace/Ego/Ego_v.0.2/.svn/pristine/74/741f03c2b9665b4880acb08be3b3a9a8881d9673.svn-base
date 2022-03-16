@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../../include/ad_header.jsp" %>
+<main>
+	<form class="search" name="search" method="post" action="notice.jsp">
+		<select>
+			<option>번호</option>
+			<option>이름</option>
+		</select>
+		<input id="key" type="text" name="key">
+		<input class="btn" type="button" value="검색">
+	</form>
+		
+	<div class="content_from">
+		<form>
+			<a href="write.jsp" class="write_btn btn">글 쓰기</a>
+			<div class="table">
+				<div class="thead">
+					<div class="row">
+						<div class="column"><input id="all_check" type="checkbox"></div>
+						<div class="column">번호</div>
+						<div class="column">제목</div>
+						<div class="column">작성자</div>
+						<div class="column">작성일</div>
+					</div>
+				</div>
+				<div class="tbody">
+					<%
+					for(int i=1; i<=15; i++)
+					{
+						%>
+						<div class="row">
+							<div class="column"><input type="checkbox"></div>
+							<div class="column"><%= i %></div>
+							<div class="column"><a href="view.jsp">공지사항입니다.</a></div>
+							<div class="column">관리자</div>
+							<div class="column">2021-12-30</div>
+						</div>
+						<%
+					}
+					%>
+				</div>
+			</div>
+			
+			<div class="paging">
+				<ul>
+					<li><a href="#">◀</a></li>
+					<li><a href="#" class="now">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>
+					<li><a href="#">▶</a></li>
+				</ul>
+			</div>
+			
+			<input id="del_btn" class="del_btn btn" type="button" value="삭제하기">		
+		</form>
+	</div>
+</main>
+<%@ include file="../../include/ad_footer.jsp" %>

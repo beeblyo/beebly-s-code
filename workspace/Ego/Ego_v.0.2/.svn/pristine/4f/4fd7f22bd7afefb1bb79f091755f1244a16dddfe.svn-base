@@ -1,0 +1,87 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../../include/ad_header.jsp" %>
+<main>
+	<div>
+		<form class="admin_wrap" name="add" method="post" action="writeok.jsp" enctype="multipart/form-data">
+			<div class="btn_wrap">
+				<input id="back_btn" class="btn" type="button" value="취소하기" onclick="backBtn('test.jsp')">
+				<input class="btn" type="submit" value="등록하기">
+			</div>
+			
+			<div class="add_form">
+				<input type="hidden" name="host" value="<%=login.getNo()%>">
+				<div class="title">
+					<div>
+						<span>제목</span>
+						<input type="text" name="title" placeholder="제목을 입력하세요.">
+					</div>
+					<div>
+						<span>카테고리</span>
+						<select name="cate">
+							<option>없음
+							<option value="1">심리
+							<option value="2">연애
+							<option value="3">공포
+							<option value="4">닮은꼴
+						</select>
+					</div>
+					<div class="clearfix">
+						<span>해쉬태그</span>
+						<p class="hash">
+							<span><input id="01" type="checkbox" name="hash" value="01"> <label for="01">#자연</label></span>
+							<span><input id="02" type="checkbox" name="hash" value="02"> <label for="02">#공포</label></span>
+							<span><input id="03" type="checkbox" name="hash" value="03"> <label for="03">#스릴</label></span>
+							<span><input id="04" type="checkbox" name="hash" value="04"> <label for="04">#추리</label></span>
+							<span><input id="05" type="checkbox" name="hash" value="05"> <label for="05">#일상</label></span>
+							<span><input id="06" type="checkbox" name="hash" value="06"> <label for="06">#건강</label></span>
+							<span><input id="07" type="checkbox" name="hash" value="07"> <label for="07">#학업</label></span>
+							<span><input id="08" type="checkbox" name="hash" value="08"> <label for="08">#취미</label></span>
+							<span><input id="09" type="checkbox" name="hash" value="09"> <label for="09">#음식</label></span>
+							<span><input id="10" type="checkbox" name="hash" value="10"> <label for="10">#미래</label></span>
+							<span><input id="11" type="checkbox" name="hash" value="11"> <label for="11">#랜덤</label></span>
+							<span><input id="12" type="checkbox" name="hash" value="12"> <label for="12">#운세</label></span>
+							<span><input id="13" type="checkbox" name="hash" value="13"> <label for="13">#초현실적</label></span>
+							<span><input id="14" type="checkbox" name="hash" value="14"> <label for="14">#연애</label></span>
+							<span><input id="15" type="checkbox" name="hash" value="15"> <label for="15">#유머</label></span>
+							<span><input id="16" type="checkbox" name="hash" value="16"> <label for="16">#닮은꼴</label></span>
+							<span><input id="17" type="checkbox" name="hash" value="17"> <label for="17">#주변인</label></span>
+							<span><input id="18" type="checkbox" name="hash" value="18"> <label for="18">#음악</label></span>
+							<span><input id="19" type="checkbox" name="hash" value="19"> <label for="19">#영화</label></span>
+							<span><input id="20" type="checkbox" name="hash" value="20"> <label for="20">#게임</label></span>
+							<span><input id="21" type="checkbox" name="hash" value="21"> <label for="21">#날씨</label></span>
+							<span><input id="22" type="checkbox" name="hash" value="22"> <label for="22">#색상</label></span>
+							<span><input id="23" type="checkbox" name="hash" value="23"> <label for="23">#과학</label></span>
+							<span><input id="24" type="checkbox" name="hash" value="24"> <label for="24">#문학</label></span>
+							<span><input id="25" type="checkbox" name="hash" value="25"> <label for="25">#여행</label></span>
+							<span><input id="26" type="checkbox" name="hash" value="26"> <label for="26">#역사</label></span>
+							<span><input id="27" type="checkbox" name="hash" value="27"> <label for="27">#철학</label></span>
+							<span><input id="28" type="checkbox" name="hash" value="28"> <label for="28">#금융</label></span>
+							<span><input id="29" type="checkbox" name="hash" value="29"> <label for="29">#우주</label></span>
+							<span><input id="30" type="checkbox" name="hash" value="30"> <label for="30">#지리</label></span>
+							<span><input id="31" type="checkbox" name="hash" value="31"> <label for="31">#IT</label></span>
+							<span><input id="32" type="checkbox" name="hash" value="32"> <label for="32">#유명인</label></span>
+							<span><input id="33" type="checkbox" name="hash" value="33"> <label for="33">#디자인</label></span>
+							<span><input id="34" type="checkbox" name="hash" value="34"> <label for="34">#습관</label></span>
+							<span><input id="35" type="checkbox" name="hash" value="35"> <label for="35">#시간</label></span>
+							<span><input id="36" type="checkbox" name="hash" value="36"> <label for="36">#감정</label></span>
+							<span><input id="37" type="checkbox" name="hash" value="37"> <label for="37">#신체</label></span>
+							<span><input id="38" type="checkbox" name="hash" value="38"> <label for="38">#휴식</label></span>
+							<span><input id="39" type="checkbox" name="hash" value="39"> <label for="39">#직업</label></span>
+							<span><input id="40" type="checkbox" name="hash" value="40"> <label for="40">#규칙</label></span>
+						</p>
+					</div>
+					<div>
+						<span>테스트 폴더명</span>
+						<input type="text" name="folder">
+					</div>
+					<div>
+						<span>테스트 파일 첨부</span>
+						<input type="file" name="file">
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</main>
+<%@ include file="../../include/ad_footer.jsp" %>

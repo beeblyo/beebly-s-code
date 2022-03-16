@@ -1,0 +1,12 @@
+package ego.util;
+
+public class util 
+{
+	public String Dosplit(String val)
+	{
+		String ary[] = val.split("@");
+		
+		return ary[0];	
+	}
+	
+}

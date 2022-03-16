@@ -1,0 +1,125 @@
+drop database egodb;
+create database egodb;
+use egodb;
+
+create table user
+(
+	u_no int primary key auto_increment comment '사용자 번호',
+	u_id varchar(100) comment '아이디',
+	u_email varchar(100) comment '이메일',
+	u_nickname varchar(100) comment '닉네임',
+	u_password varchar(30) comment '비밀번호',
+	u_gender varchar(2) comment '성별',
+	u_birthdate datetime default now() comment '생년월일',
+	u_mbti varchar(10) comment 'mbti',
+	u_keyword text comment '키워드',
+	u_joindate datetime default now() comment '가입일자',
+	u_retire varchar(2) comment '탈퇴여부',
+	u_retiredate datetime default now() comment '탈퇴일자',
+	u_host varchar(2) comment '권한'
+);
+
+create table profile
+(
+	p_no int primary key auto_increment comment '번호',	
+	u_no int comment '사용자 번호',
+	p_name varchar(255) comment '물리이름',
+	f_name varchar(255) comment '논리이름',
+	FOREIGN KEY (u_no) REFERENCES user (u_no)
+);
+
+create table search_record
+(
+	s_no int primary key auto_increment comment '검색 번호',
+	u_no int comment '사용자 번호',
+	s_recent varchar(255) comment '최근 검색어',
+	s_date datetime default now() comment '검색일자',
+	FOREIGN KEY (u_no) REFERENCES user (u_no)
+);
+
+create table board
+(
+	b_no int primary key auto_increment comment '작성글 번호',
+	u_no int comment '사용자 번호',
+	b_title varchar(300) comment '제목',
+	b_date datetime default now() comment '작성일',
+	b_note text comment '작성내용',
+	b_kind varchar(2) comment '작성글 종류',
+	b_ansnote text comment '답변내용',
+	b_ansdate datetime default now() comment '답변일자',
+	FOREIGN KEY (u_no) REFERENCES user (u_no)
+);
+
+create table category
+(
+	cg_no int primary key auto_increment comment '카테고리 번호',
+	cg_name varchar(200) comment '카테고리이름'
+);
+
+create table test
+(
+	t_no int primary key auto_increment comment '테스트번호',
+	u_no int comment '사용자 번호',
+	cg_no int comment '카테고리 번호',
+	t_title varchar(300) comment '테스트 제목',
+	t_rjoincount int default 0 comment '참여수',
+	t_foldername varchar(200) comment '폴더명',
+	t_hashtag text comment '해쉬태그',
+	t_postdate datetime default now() comment '테스트 등록일',
+	FOREIGN KEY (u_no) REFERENCES user (u_no),
+	FOREIGN KEY (cg_no) REFERENCES category (cg_no)
+);
+
+create table comment
+(
+	c_no int primary key auto_increment comment '댓글 번호',
+	t_no int comment '테스트 번호',
+	u_no int comment '사용자 번호',
+	cl_no int default 0 comment '대댓글번호',
+	c_note text comment '내용',
+	FOREIGN KEY (t_no) REFERENCES test (t_no),
+	FOREIGN KEY (u_no) REFERENCES user (u_no)
+);
+
+create table bookmark
+(
+	bm_no int primary key auto_increment comment '즐겨찾기 번호',
+	t_no int comment '테스트 번호',
+	u_no int comment '사용자 번호',
+	bm_date datetime default now() comment '저장일자',
+	FOREIGN KEY (t_no) REFERENCES test (t_no),
+	FOREIGN KEY (u_no) REFERENCES user (u_no)
+);
+
+create table recommend
+(
+	r_no int primary key auto_increment comment '추천번호',
+	t_no int comment '테스트 번호',
+	u_no int comment '사용자 번호',
+	r_date datetime default now() comment '추천일자',
+	r_kind varchar(2) comment '추천종류',
+	FOREIGN KEY (t_no) REFERENCES test (t_no),
+	FOREIGN KEY (u_no) REFERENCES user (u_no)
+);
+
+create table test_record
+(
+	t_rno int primary key auto_increment comment '테스트 기록번호',
+	t_no int comment '테스트 번호',
+	u_no int comment '사용자 번호',
+	t_rdate datetime default now() comment '테스트 실행일자',
+	FOREIGN KEY (t_no) REFERENCES test (t_no),
+	FOREIGN KEY (u_no) REFERENCES user (u_no)
+);
+
+show tables;
+desc user;
+desc board;
+desc bookmark;
+desc category;
+desc comment;
+desc profile;
+desc recommend;
+desc search_record;
+desc test;
+desc test_record;

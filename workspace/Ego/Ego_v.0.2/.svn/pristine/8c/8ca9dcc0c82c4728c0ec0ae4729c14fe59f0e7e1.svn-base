@@ -1,0 +1,747 @@
+/* =============== 공통 =============== */
+.wrap
+{
+	width: 100%;
+	max-width: 1200px;
+	text-align: center;
+}
+
+h1
+{
+	margin-bottom: 40px;
+}
+
+h2
+{
+	display: inline-block;
+	height: 40px;
+	
+	margin-bottom: 25px;
+}
+
+h3
+{
+	text-align: left;
+}
+
+/* =============== login =============== */
+.login_wrap
+{
+	margin-top: 200px;
+}
+
+.login_wrap h1
+{
+	width: 180px;
+	margin: 0 auto 30px;
+}
+
+.login_wrap h1 a
+{
+	height: 75px;
+}
+
+.login
+{
+	width: 300px;
+	background: #fff;
+	
+	margin: 0 auto;
+	padding: 50px;
+}
+
+.login input
+{
+	width: 200px;
+	height: 30px;
+	border: 1px solid #eee;
+	padding: 5px 10px;
+}
+
+.login input[type=text]
+{
+	margin-bottom: 10px;
+}
+
+.login input[type=password]
+{
+	margin-bottom: 35px;
+}
+
+.login input[type=submit]:hover
+{
+	background: #282828;
+	color: #fff;
+}
+
+/* =============== header =============== */
+header
+{
+	color: #fff;
+	width: 200px;
+	height: 100%;
+	background: #282828;
+	padding: 30px;
+	
+	position: fixed;
+}
+
+h1 a
+{
+	width: 100%;
+	height: 60px;
+}
+
+h1 .w_logo
+{
+	background: url('/Ego_v.0.2/img/logo/w_logo.png') no-repeat center center;
+	background-size: cover;
+}
+
+h1 .b_logo
+{
+	background: url('/Ego_v.0.2/img/logo/b_logo.png') no-repeat center center;
+	background-size: cover;
+}
+
+header p
+{
+	margin-bottom: 50px;
+}
+
+nav a {
+	display: block;
+	padding: 5px;
+}
+
+nav a:hover
+{
+	background: #ddd;
+	color: #282828;
+}
+
+nav .now
+{
+	background: #fff;
+	color: #282828;
+}
+
+.logout
+{
+	position: absolute;
+	bottom: 30px;
+	font-size: 14px;
+}
+
+.logout:hover
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* =============== main =============== */
+main
+{
+	padding: 30px;
+	padding-left: 230px;
+	width: 100%;
+}
+
+.preview
+{
+	display: inline-block;
+	padding: 20px;
+	margin-bottom: 30px;
+	margin-right: 40px;
+	width: 520px;
+	background: #eee;
+}
+
+.preview:nth-child(3),
+.preview:nth-child(4)
+{
+	margin-bottom: 0;
+}
+
+.preview:nth-child(2n)
+{
+	margin-right: 0;
+}
+
+h3 {
+	margin-bottom: 15px;
+}
+
+/* =============== table =============== */
+.table 
+{
+	width: 100%;
+	background: #fff;
+}
+
+.table a
+{
+	width: 100%;
+	height: 100%;
+}
+
+.column
+{
+	display: inline-block;
+	padding: 3px;
+	
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.thead
+{
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+	text-align: center;
+}
+
+.tbody
+{
+	border-bottom: 1px solid #222;
+}
+
+.tbody .row:hover
+{
+	background: #282828;
+	color: #fff;
+}
+
+.preview .column:first-child
+{
+	width: 50px;
+	text-align: center;
+}
+
+.preview .column:nth-child(2)
+{
+	width: 160px;
+}
+
+.preview .column:nth-child(3)
+{
+	width: 100px;
+	text-align: center;
+}
+
+.preview .column:nth-child(4)
+{
+	width: 150px;
+}
+
+.preview .tbody .column:nth-child(4)
+{
+	text-align: right;
+}
+
+.category
+{
+	vertical-align: top;
+}
+
+.category .column:nth-child(2)
+{
+	width: 85%;
+}
+
+/* =============== search =============== */
+.search
+{
+	margin: 20px auto;
+	width: 600px;
+	font-size: 0;
+}
+.search select
+{
+	width: 100px;
+	height: 30px;
+}
+
+.search input[type=submit]
+{
+	min-width: 50px;
+	border-radius: 0;
+	border-radius: 0 5px 5px 0;
+	vertical-align: top;
+}
+
+.search input[type=text]
+{
+	border: 1px solid #000;
+	width: 450px;
+	height: 30px;
+}
+
+/* =============== content_from =============== */
+.content_from
+{
+	width: 1000px;
+	background: #fff;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.content_from form
+{
+	position: relative;
+	min-width: 600px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.content_from .row input[type=text]
+{
+	width: 100%;
+	height: 100%;
+}
+
+.write_btn
+{
+	margin: 0;
+	background: #eee;
+	font-size: 14px;
+	line-height: 30px;
+	
+	position: absolute;
+	right: 0;
+	top: -50px;
+}
+
+.write_btn:hover
+{
+	background: #282828;
+	color: #fff;
+}
+
+.content_from .column:nth-child(1),
+.content_from .column:nth-child(2)
+{
+	width: 40px;
+	text-align: center;
+}
+
+.content_from .column:nth-child(3)
+{
+	width: 60%;
+}
+
+.content_from .tbody .column:nth-child(3)
+{
+	text-align: left;
+}
+
+.content_from .column:nth-child(4)
+{
+	width: 10%;
+}
+
+.content_from .column:nth-child(5)
+{
+	width: 15%;
+}
+
+.content_from .category
+{
+	margin-top: 40px;
+}
+
+.content_from .category .column:nth-child(3)
+{
+	width: 75%;
+}
+
+.content_from .category .column:nth-child(4),
+.content_from .category .column:nth-child(5)
+{
+	width: 5%;
+}
+
+.content_from .question .column:nth-child(3)
+{
+	width: 50%;
+}
+
+.content_from .question .column:nth-child(4)
+{
+	width: 10%;
+}
+
+.content_from .question .column:nth-child(5)
+{
+	width: 15%;
+}
+
+.content_from .question .column:nth-child(6)
+{
+	width: 10%;
+}
+
+.question
+{
+	position: relative;
+}
+
+.answer_filter
+{
+	display: none;
+	padding: 5px 10px;
+	position: absolute;
+    top: -32px;
+    right: 22px;
+    color: #555;
+}
+
+.answer_filter .now
+{
+	color: #6667ab;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* =============== btn =============== */
+.del_btn
+{
+	background: #ddd;
+	
+	margin-top: 20px;
+	margin-left: 20px;
+	float: right;
+}
+
+.del_btn:hover
+{
+	background: #282828;
+	color: #fff;
+}
+
+/* =============== write =============== */
+.btn_wrap
+{
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.btn_wrap .btn:first-child
+{
+	margin-right: 20px;
+}
+
+.btn:hover
+{
+	background: #282828;
+	color: #fff;
+}
+
+.admin_wrap
+{
+	min-width: 600px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.admin_wrap p:first-child
+{
+	width: 100%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.admin_wrap a
+{
+	background: #eee;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.admin_wrap .btn_wrap a:first-child
+{
+	float: left;
+}
+
+.admin_wrap .btn_wrap a:nth-child(2)
+{
+	margin-right: 20px;
+}
+
+
+/*   */
+.write_form > input,
+.write_form > p,
+.view_form > p
+{
+	margin-bottom: 30px;
+}
+
+.write_form > p,
+.view_form > p
+{
+	width: 45%;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+}
+
+.write_form input[type=text]
+{
+	width: 100%;
+	height: 40px;
+	border: 1px solid #282828;
+	padding: 5px 10px;
+}
+
+.write_form textarea
+{
+	width: 100%;
+	height: 320px;
+	padding: 10px;
+}
+.view_form div
+{
+	border: 1px solid #ddd;
+	width: 100%;
+	height: 320px;
+	padding: 10px;
+}
+
+/* =============== info =============== */
+.info
+{
+	width: 560px;
+	padding: 40px;
+	font-size: 0;
+}
+
+.profile
+{
+	display: inline-block;
+	width: 150px;
+	margin-right: 30px;
+	font-size: 16px;
+}
+
+.img
+{
+	width: 150px;
+	height: 150px;
+	background: #eee;
+	border-radius: 150px;
+	margin-bottom: 20px;
+}
+
+.info .sec_btn
+{
+	width: 150px;
+	height: 30px;
+}
+
+.info .sec_btn:hover
+{
+	background: red;
+	color: #282828;
+	color: #fff;
+}
+
+.detail
+{
+	display: inline-block;
+	font-size: 16px;
+}
+
+.detail p
+{
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+	background: #fdfdfd;
+	padding: 0 10px;
+	margin-bottom: 20px;
+}
+
+.detail span
+{
+	display: inline-block;
+	width: 80px;
+	margin-right: 10px;
+}
+
+.keyword > div
+{
+	width: 100%;
+	line-height: 40px;
+	background: #fdfdfd;
+	padding: 0 10px;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+.keyword > div p:first-child
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.info .btn_wrap
+{
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.close_btn
+{
+	width: 200px;
+	height: 40px;
+	background: #eee;
+	margin: 0 auto;
+}
+
+.close_btn:hover
+{
+	background: #282828;
+	color: #fff;
+}
+
+/* =============== add_form =============== */
+.add_form .title
+{
+	width:100%;
+	vertical-align: top;
+}
+
+.add_form .title div
+{
+	min-height: 40px;
+	font-size: 16px;
+}
+
+.add_form span
+{
+	display: inline-block;
+	width: 140px;
+	font-weight: bold;
+}
+
+.add_form input[type=text]
+{
+	display: inline-block;
+	width: 850px;
+	height: 30px;
+	background: #fdfdfd;
+	margin-bottom: 20px;
+}
+
+.hash
+{
+	display: inline-block;
+	width: 860px;
+	margin-bottom: 20px;
+	float: right;
+}
+
+.hash span
+{
+	width: 100px;
+	margin-left: 0;
+	font-weight: lighter;
+}
+
+/* =============== check =============== */
+.test_title
+{
+	font-size: 22px !important;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+/* =============== amend_form =============== */
+.amend_form span
+{
+	display: inline-block;
+	width: 20%;
+}
+
+.amend_form input
+{
+	width: 80%;
+}
+
+/* =============== question =============== */
+.question_wrap
+{
+	padding-top: 20px;
+}
+
+.question_wrap .content div
+{
+	padding-bottom: 10px;
+}
+
+.question_wrap .content span
+{
+	display: inline-block;
+	width: 100px;
+}
+
+.question_wrap .content p
+{
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.question_wrap input[type=text]
+{
+	width: 694px;
+	border: 1px solid #ddd;
+}
+
+.question_wrap textarea,
+.textarea
+{
+	width: 100%;
+	min-height: 300px;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+/* ========== 답변 ========== */
+.answer
+{
+	width: 95%;
+	background: #eee; 
+	padding: 30px;
+	margin: 20px auto;
+	border-radius: 10px;
+}
+
+.answer a
+{
+	cursor: pointer;
+}
+
+.answer > div:first-child
+{
+	margin-bottom: 10px;
+}
+
+.answer textarea
+{
+	min-height: 150px !important;
+}
+
+.answer input[type=submit]
+{
+	float: right;
+	cursor: pointer;
+}
+
+.answer a:hover,
+.answer input[type=submit]:hover
+{
+	color: red;
+}

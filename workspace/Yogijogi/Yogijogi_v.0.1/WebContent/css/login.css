@@ -1,0 +1,226 @@
+/* ==================== header ==================== */
+header.back
+{
+	background: none;
+	color: #fff;
+}
+
+nav > ul > li:hover
+{
+	border-bottom: 2px solid #fff;
+}
+
+.sub_menu
+{
+	background: #ddd;
+}
+
+.sub_menu li:hover
+{
+	background: #fff;
+	color: #11273f;
+}
+
+/* ==================== main ==================== */
+main
+{
+	background: #11273f;
+	padding-top: 130px;
+}
+
+.login_wrap
+{
+	width: 600px;
+	background: rgba(255,255,255,0.4);
+	padding: 50px 30px;
+	margin: 0 auto;
+
+	color: #fff;
+	text-align: center;
+}
+
+h2
+{
+	margin-bottom: 50px;
+
+	font-size: 32px;
+}
+
+/* ==================== login_wrap ==================== */
+/* ===== form ===== */
+.login_wrap div
+{
+	width: 350px;
+	margin: 0 auto 10px;
+
+	font-size: 0;
+}
+
+.login_wrap span
+{
+	width: 110px;
+
+	text-align: left;
+	font-size: 16px;
+}
+
+.login_wrap input[type=text],
+.login_wrap input[type=password],
+.login_wrap input[type=email]
+{
+	width: 240px; height: 35px;
+	padding: 0 10px;
+}
+
+/* ===== btn ===== */
+.btn_wrap .btn
+{
+	height: 45px;
+	margin-top: 20px;
+}
+
+.btn_wrap input[type=submit]
+{
+	width: 100%;
+}
+
+.btn_wrap a
+{
+	padding: 0 10px;
+
+	line-height: 45px;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.btn_wrap a:hover
+{
+	color: #ddd;
+}
+
+.btn_wrap a:last-child
+{
+	font-size: 12px;
+}
+
+/* ==================== join ==================== */
+.login_wrap b
+{
+	width: 100%;
+	margin-top: 5px;
+
+	font-size: 14px;
+	text-align: right;
+}
+
+/* ===== use ===== */
+.login_wrap .use,
+.login_wrap .use div
+{
+	font-size: 16px;
+}
+
+.login_wrap .use > div
+{
+	height: 150px;
+	background: rgba(255,255,255,0.6);
+	padding: 10px;
+	
+	color: #282828;
+	text-align: left;
+	overflow: auto;
+}
+
+/* ===== phone ===== */
+.phone > div
+{
+	position: relative;
+	
+	display: inline-block;
+	width: 240px;
+	margin-bottom: 0;
+	
+	font-size: 16px;
+}
+
+.phone input[type=text]
+{
+	width: 65px;
+}
+
+.phone input[type=text]:first-child
+{
+	position: absolute;
+	left: 0;
+}
+
+.phone input[type=text]:last-child
+{
+	position: absolute;
+	right: 0;
+}
+
+/* ===== btn ===== */
+.join a,
+.join input[type=submit]
+{
+	width: 48%;
+}
+
+.join a
+{
+	float: left;
+	
+	background: #aaa;
+	
+	color: #000;
+}
+
+.join a:hover
+{
+	background: #ddd;
+
+	color: #000;
+}
+
+.join input[type=submit]
+{
+	float: right;
+	
+	background: #eee;
+}
+
+.join input[type=submit]:hover
+{
+	background: #11273f;
+}
+
+/* ===== mail_send =====*/
+.login_wrap .mail_send
+{
+	width: 100%;
+	margin: 0;
+	padding-top: 40px;
+
+	text-align: center;
+}
+
+.mail_send img
+{
+	margin: 0 auto 30px;
+}
+
+.mail_send .btn_wrap .btn
+{
+	width: 100px;
+	background: #ddd;
+
+	color: #282828;
+}
+
+.mail_send .btn_wrap .btn:hover
+{
+	background: #11273f;
+	
+	color: #fff;
+}

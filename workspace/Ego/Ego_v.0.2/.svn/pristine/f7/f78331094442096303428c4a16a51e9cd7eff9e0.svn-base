@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../../include/ad_header.jsp" %>
+<main>
+	<div>
+		<form class="admin_wrap" name="write" method="post" action="#">
+			<div class="btn_wrap">
+				<input id="back_btn" class="btn" type="button" value="취소하기">
+				<input class="btn" type="submit" value="등록하기">
+			</div>
+			
+			<div class="write_form">
+				<input type="text" name="title" value="공지사항입니다.">
+				<p>작성자: 관리자</p>
+				<p>작성일: 2022-01-05</p>
+				<textarea name="post">홈페이지 리뉴얼 예정입니다.
+2022년 1월 5일 오전 9시부터 오후 2시까지 테스트를 하실 수 없으니 확인 부탁드립니다.
+감사합니다.
+				</textarea>
+			</div>
+		</form>
+	</div>
+</main>
+	
+<script>
+$('#back_btn').click(function () {
+	//alert('뒤로가기');
+	if(confirm('취소하시겠습니까?'))
+	{
+		window.location = 'view.jsp';
+	}
+});
+</script>
+<%@ include file="../../include/ad_footer.jsp" %>

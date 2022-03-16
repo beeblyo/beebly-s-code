@@ -1,0 +1,75 @@
+#discription li  {
+  text-align: center;
+  margin-bottom : 20px;
+  font-size : 18px;
+  color : #1C2833;
+}
+
+#text1{
+  margin-top : 70px;
+  margin-bottom : 50px;
+  font-size : 24px;
+  text-align: center;
+}
+#text2{
+  margin : 0;
+  margin-top : 30px;
+  margin-bottom : 20px;
+  font-size : 32px;
+  text-align: center;
+}
+#text3{
+  margin : 0px;
+  font-size : 18px;
+  margin-bottom : 20px;
+  text-align: center;
+}
+#resultImage{
+  width : 100%;
+  margin-bottom: 20px;
+}
+#harmonyWrapper{
+  margin-top : 70px;
+  width : 100%;
+  text-align: center;
+}
+.harmony{
+  display:inline-block;
+  width : 45%;
+  margin:auto;
+  //height : 200px;
+  //max-height : 200px;
+  text-align: center;
+  margin-bottom : 40px;
+
+}
+.harmony img{
+  margin-top : 10px;
+  max-width : 100%;
+  max-height:200px;
+}
+.harmony p{
+  margin : 0;
+  font-size : 20px;
+}
+
+#badPower, #goodPower{
+  font-size: 24px;
+}
+
+#badText{
+}
+
+#goodText{
+}
+
+#filler{
+  height : 200px;
+}
+
+#dev{
+  margin-top : 60px;
+  color : #CCD1D1;
+  font-size : 14px;
+  text-align: center;
+}

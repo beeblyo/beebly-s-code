@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+<link rel="stylesheet" href="../css/teststyles/quizStyle.css">
+<link rel="stylesheet" href="../css/teststyles/finishStyle.css">
+<script type="text/javascript" src="../js/scripts/mainPageScript.js?version=2"></script>
+<script type="text/javascript" src="../js/scripts/fileRead.js?version=2"></script>
+<script type="text/javascript" src="../js/scripts/script.js?version=2"></script>
+<!-- ====================== ¸ÞÀÎ ÄÁÅÙÃ÷ ½ÃÀÛ ==================== -->
+<main>
+	<div class="backward_wrap">
+		<div class="back_btn">
+			<a id="exit_btn" href="start.jsp"></a>
+			<a id="prev_btn" href="#" onclick="moveSlider(-1)"></a>
+		</div>
+	</div>
+	
+	<div class="test_page_wrap" id="main_contents">
+		<div  id ="progressDiv">
+			<div id="progressText">0</div>
+			<div class="test_progress_bar" id ="progressBar">
+				<div class="progress" id="progressValue"></div>
+			</div>
+		</div>
+		
+		<div class="test_question" id="qna_mask">
+			
+			<div class="test_answer claerfix">
+				<ul id = "qna_slider">
+	     		</ul>
+			</div>
+		</div>
+	</div>
+</main>
+<!-- ====================== ¸ÞÀÎ ÄÁÅÙÃ÷ ³¡ ==================== -->
+<%@ include file="../include/footer.jsp" %>

@@ -1,0 +1,64 @@
+package ego.dto;
+import ego.dbms.DBManager;
+import ego.vo.*;
+
+public class CategoryDTO extends DBManager
+{
+	String sql = "";
+	
+	//******************카테고리를 등록한다******************************//
+	public boolean categoryInsert(CategoryVO vo)
+	{
+		if(DBOpen() == false) return false;
+		sql  = "";
+		sql += "insert into category (cg_name) ";
+		sql += "values (";
+		sql += "'" + vo.getCategoryName().replace("'","") + "')";
+		RunSQL(sql);
+		return true;
+	}
+	
+	//******************카테고리를 업데이트한다******************************//
+	public boolean categoryUpdate(CategoryVO vo)
+	{
+		if ( DBOpen() == false ) {return false;}
+		sql = "";
+		sql += "UPDATE category ";
+		sql += "SET cg_name = '" + vo.getCategoryName().replace("'","") + "' ";
+		sql += "WHERE cg_no = " + vo.getCategoryNumber();
+		RunSQL(sql);
+		return true;
+	}
+	
+	//******************카테고리를 삭제한다******************************//
+	public void categoryDelete(CategoryVO vo)
+	{
+		if(DBOpen() == true) 
+		{
+			sql  = "";
+			sql += "DELETE FROM category WHERE cg_no = " + vo.getCategoryNumber();
+			RunSQL(sql);
+		}
+	}
+	
+	//******************카테고리를 조회한다******************************//
+	public boolean categoryIndex(CategoryVO vo)
+	{
+		if ( DBOpen() == false) {return false;}
+		while (GetNext() == true)
+		{
+			sql = "";
+			sql += "SELECT cg_name ";
+			sql += "FROM category ";
+			sql += "WHERE cg_no = " + vo.getCategoryNumber();
+		}
+		OpenQuery(sql);
+		return true;
+	}
+	
+	public static void main(String[] args) 
+	{
+	
+	}
+
+}

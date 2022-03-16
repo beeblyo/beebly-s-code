@@ -1,0 +1,240 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+/* =============== main =============== */
+body
+{
+	width:100%;
+	background-image: url("../img/main_picture.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}		
+
+
+/* ===== header ===== */
+body header
+{
+	background: rgba(0,0,0, 1);
+
+	color:#fff;
+}
+
+header nav > ul > li:hover
+{
+	border-bottom: 2px solid #fff;
+}
+
+nav .sub_menu
+{
+	background: rgba(0,0,0, 0.8);
+}
+
+/* ===== container ===== */
+.container
+{
+	position:relative;
+
+	width:100%;
+}
+
+.main_flag_box
+{
+	position: relative;
+
+	width: 360px;
+	padding:15px;
+	
+	transform: translate(10%, 40%);
+}
+
+.main_flag
+{
+	left: 10%;
+
+	display:inline-block;
+
+	color: #ffffff;
+	font-weight: 700;
+}
+
+.flag1
+{
+	display: block;
+
+	font-size: 52px;
+}
+
+.flag2
+{
+	max-width: 140px;
+	padding: 0px 20px;
+	border-top: 15px solid white;
+
+	font-size: 100px;
+	line-height: 100px;
+
+}
+
+.flag3
+{
+	position: absolute;
+
+	width: 100%; max-width: 140px;
+	padding: 15px;
+	border: 15px solid white;
+
+	font-size: 18px;
+	text-align: left;
+
+	transform: translate(140px, 0px);
+}
+
+
+/* =============== section =============== */
+section
+{
+	position: absolute;
+	top: 30vh;
+	right: 8vw;
+	z-index: 98;  
+}
+
+section > div
+{
+	z-index: 9;
+
+	width: 340px;
+	background-color: white;
+	border: 1px solid #DDDDDD;
+
+	text-align: center;
+}
+
+/* ===== slider button ===== */
+.arrow
+{
+	position:fixed;
+	top: 50%;
+
+	display: inline-block;
+	padding: 1rem;
+	box-shadow: 5px -5px #f7f5f7 inset;
+	padding: 5px;
+	border-width: 0 0 2rem 2rem;
+	border: solid transparent;
+	border-radius: 10px;
+
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 28px;
+
+	transition: 0.2s;
+
+	cursor: pointer;
+}
+
+.arrow:hover
+{
+	box-shadow: 2px -2px 0 2px orchid inset;
+	box-shadow: 4px -4px orchid inset;
+
+	cursor: pointer;
+}
+
+.left
+{
+	transform:rotate(45deg);
+}
+
+.right
+{
+	right: 0;
+
+	transform:rotate(225deg);
+}
+
+/* ===== index ===== */
+.index_index_title
+{
+	margin:0;
+}
+
+.index_title > a
+{
+	padding: 10px 0px;
+
+	font-size:36px !important;
+	font-weight: 700 !important; 
+}
+
+.info
+{
+	position:relative;
+	
+	width:100%; height:260px;
+	padding:30px; 
+	
+	color:#2C2D2D;
+	text-align:left;
+	font-size:16px;
+}
+
+.main_specific_info
+{
+	width:100%;
+	border-bottom: 1px soild black;
+}
+
+.index_btn
+{
+	position: absolute;
+	right: 50%; bottom: 20px;
+
+	display: inline-block;
+	width: 80%;
+	background-color: #11273F;
+	padding: 10px 5px;
+	border: 15px solid white;
+	transform: translate(50%, 0px);
+
+	color:white;
+	text-align: center;
+	font-size: 28px !important;
+
+	transition: 0.2s;
+}
+
+.index_btn:hover
+{
+	background-color: #6E2DA0;
+
+	cursor: pointer;
+}
+
+.more
+{
+	padding-right:10px;
+
+	line-height:45px;
+	text-align:right;
+}
+
+.more > a
+{
+	margin-right: 10px;
+
+	color: #11273F;
+	text-decoration: underline;
+	font-weight: 700;
+	font-size: 18px;
+
+	transition: 0.2s;
+}
+
+.more > a:hover 
+{
+	font-weight:800;
+	color:tomato;
+}

@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="./include/header.jsp" %>
+<!-- ====================== ¸ÞÀÎ ÄÁÅÙÃ÷ ½ÃÀÛ ==================== -->
+<link rel="stylesheet" href="/Ego_v.0.2/css/mainslide.css">  		
+<div class="main">
+	<div class="wrap">
+		<div class="slide">
+			<h2>ÀÎ±â Å×½ºÆ® TOP 7</h2>
+            <div class="hidden">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="/Ego_v.0.2/test/start.jsp"><img src="img/thumb/01.jpg"></a></div>
+                        <div class="swiper-slide"><a href="/Ego_v.0.2/test/start.jsp"><img src="img/thumb/02.jpg"></a></div>
+                        <div class="swiper-slide"><a href="/Ego_v.0.2/test/start.jsp"><img src="img/thumb/03.jpg"></a></div>
+                        <div class="swiper-slide"><a href="/Ego_v.0.2/test/start.jsp"><img src="img/thumb/04.jpg"></a></div>
+                        <div class="swiper-slide"><a href="/Ego_v.0.2/test/start.jsp"><img src="img/thumb/05.jpg"></a></div>
+                        <div class="swiper-slide"><a href="/Ego_v.0.2/test/start.jsp"><img src="img/thumb/06.jpg"></a></div>
+                        <div class="swiper-slide"><a href="/Ego_v.0.2/test/start.jsp"><img src="img/thumb/07.jpg"></a></div>
+                    </div>
+                    <!-- Add Arrows -->
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+<script src="/Ego_v.0.2/js/mainslide.js"></script>
+		
+		<div class="category">
+		<%
+		if(c_vo != null)
+		{
+			for(CategoryVO item : c_vo)
+			{
+				%>
+				<a href="search.jsp?cate=<%=item.getCategoryNumber()%>"><%= item.getCategoryName() %></a>
+				<%
+			}
+		}
+		%>
+		</div>
+		
+		<div class="test_list">
+			<ul>
+				<%
+				ArrayList<TestVO> list = null;
+				
+				TestDTO dto = new TestDTO();
+				if(dto.testRead() != null)
+				{
+					list = dto.testRead();
+					for(TestVO item : list)
+					{
+					%>
+					<li>
+						<div class="test_view_wrap">
+							<a href="/Ego_v.0.2/test/start.jsp?folder=<%=item.getFoldername()%>" title="<%=item.getTestTitle()%>">
+								<div class="test_view">
+									<div>
+										<div class="test_cate"><%=item.getCategoryName().split(" ")[0]%></div>
+									</div>
+									<img alt="title" src="/Ego_v.0.2/testlist/<%=item.getFoldername()%>/images/w_img.jpg">
+								</div>
+								<div class="test_title"><%=item.getTestTitle()%></div> 
+								<div class="test_count">
+									<img src="/Ego_v.0.2/img/icon/eye.png"> <%=item.getJoinCount()%>
+								</div>
+							</a>
+						</div>
+					</li>
+					<%
+					}
+				}
+				%>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- ====================== ¸ÞÀÎ ÄÁÅÙÃ÷ ³¡ ==================== -->
+<%@ include file="./include/footer.jsp" %>

@@ -1,0 +1,22 @@
+<%@page import="org.apache.tomcat.util.descriptor.web.LoginConfig"%>
+<%@page import="ego.dbms.DBManager"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../config/config.jsp" %>
+<%
+//============= 매개변수 분석 처리 [ 시작 ] ==
+request.setCharacterEncoding("euc-kr");
+
+UserVO login     = (UserVO)session.getAttribute("login");
+String keyword   = request.getParameter("keyword"); //관심분야
+String mbti      = request.getParameter("mbti");
+
+UserDTO dto = new UserDTO();
+//System.out.println(keyword);
+login.setKeyword(keyword);
+//System.out.println(mbti);
+login.setMbti(mbti);
+
+if(!dto.update(login)) out.print("FALSE");
+else out.print("TRUE");
+%>

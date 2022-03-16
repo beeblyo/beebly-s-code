@@ -1,0 +1,65 @@
+
+주제선정/요구사항 정의서 (1일)
+	- 주제 선정(문화/공연/축제 포털 및 예매사이트 ?)
+	- 요구사항 정의(주요 기능 정의 - 게시판 CRUD 기능을 잘 사용할 수 있는 프로젝트)
+	예시
+	[축제 및 공연]
+	(문화포털) https://www.culture.go.kr/index.do
+	(한국문화예술위원회) https://www.arko.or.kr/
+	(예술경영지원센터) https://www.gokams.or.kr/main/main.aspx
+	(한국콘텐츠진흥원) http://www.kocca.kr/cop/main.do?lang=kr
+	(국립아시아문화전당) https://www.acc.go.kr/main/index.do
+	(코리아문화수도) https://kcoc.or.kr/
+	(국립극단) http://www.ntck.or.kr/ko
+	(두산아트센터) https://www.doosanartcenter.com/ko/performance/main
+	(세종문화회관) https://www.sejongpac.or.kr/portal/main/main.do
+	(예술의전당) https://www.sac.or.kr/site/main/home
+	(한국공예디자인문화진흥원) https://www.kcdf.or.kr/web/main/mainPage.do;jsessionid=722DC9710C8318CCC754187F1A79B73A
+	(문화가있는날) https://www.culture.go.kr/wday/index.do
+	(서울문화포털) https://culture.seoul.go.kr/culture/main/main.do
+	(축제포털사이트) https://www.thefestival.co.kr/
+	(모두의축제) https://www.tourmuch.com/
+	(대한민국구석구석) https://korean.visitkorea.or.kr/main/main.do#home
+	(문화체육관광부) https://www.mcst.go.kr/kor/s_culture/culture/cultureList.jsp
+	(관광지랭킹) https://www.korearank.com/tour/index.php
+
+	[예매사이트]
+	(티켓링크) http://www.ticketlink.co.kr/
+	(나루컬쳐) https://naruculture.co.kr/
+	(한국문화예술위원회) https://theater.arko.or.kr/Pages/Main.aspx
+	(대학로티켓.com) http://www.daehakroticket.com/main.do
+
+	[전주 사이트]
+	(전주문화재단) https://www.jjcf.or.kr/main/inner.php?sMenu=main&pre_url=https%3A%2F%2Fm.blog.naver.com%2FPostView.naver%3FisHttpsRedirect%3Dtrue%26blogId%3Dinfinity2014%26logNo%3D221176288673
+	(한옥마을) http://hanok.jeonju.go.kr/
+	(전주한벽문화관) http://www.jt.or.kr/
+	(전라북도 토탈관광) https://tour.jb.go.kr/travel/info/list.do?category_top_id=c&menuCd=DOM_000000103001000000&contentsSid=139
+
+	[예시사이트모음]
+	(예시사이트 모음) https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=infinity2014&logNo=221176288673
+	(축제사이트 모음) https://m.blog.naver.com/domainxx/221674985941
+
+	[테이터]
+	(문화데이터광장) https://www.culture.go.kr/data/main/main.do
+	(전국문화축제표준데이터) https://www.data.go.kr/data/15013104/standard.do
+	(전국공연행사정보표준데이터) https://www.data.go.kr/data/15013106/standard.do
+	(공연예술통합전산망) https://www.kopis.or.kr/por/main/main.do
+UI (3일)
+	- 최대한 심플하게
+	- 역할 분담
+	
+DB 설계 (3일)
+	- 
+
+프로그램 설계 (5일)
+	- 어떤 클래스를 사용할 것인가
+	- 클래스에 어떤 메소드가 존재하는가
+
+프로젝트 개발 (10일)
+	- 
+
+프로젝트 테스트 (2일)
+	- 
+
+프로젝트 배포 (1일)
+	- 

@@ -1,0 +1,158 @@
+/**
+ * 
+ */
+
+window.onload = function() {
+	/* ===== 선택한 값 가져오기 ===== */
+	/*
+	$.ajax({
+		type: "get",
+		url: "select_key.jsp",
+		dataType: "html",
+		success: function(data) {
+			//alert(data);
+			$('.select_key').html(data);
+		}
+	});
+	*/
+	keySelect();
+	
+	//console.log($(".select_key").find("label").attr('for'));
+	
+	/*
+	// 체크박스 배열 Loop
+    $("input[name=chk]").each(function(idx){   
+       
+      // 해당 체크박스의 Value 가져오기
+      var value = $(this).val();
+
+      var eqValue = $("input[name=chk]:eq(" + idx + ")").val() ;
+       
+      console.log(value + ":" + eqValue) ;
+       
+    });
+     
+     
+    // 배열의 특정순서의 Value 가져오기
+    var orange = $("input[name=chk]:eq(2)").val() ;
+    console.log(orange);
+     
+    // 배열의 특정순서 Value 변경하기
+    $("input[name=chk]:eq(2)").val("포도") ;
+     
+    var chgFruit = $("input[name=chk]:eq(2)").val() ;
+    console.log(chgFruit) ;
+	*/
+	
+	
+	/*
+	for(i=0; 1<count; i++)
+	{
+		$(".select_key").children("label").attr('id');
+	}
+	*/
+	/*
+	if($(".key").children("input").is(":checked"))
+	{
+		$(".key").children("input").is(":checked").attr('class');
+		console.log($(".key").children("input").is(":checked").attr('class'));
+		//console.log($(".select_key").children());
+	}
+	*/
+}
+
+function keySelect()
+{
+	$($(".select_key").children("label")).css('display','none');
+	$(".key").children("input").each(function(idx){
+		console.log($(".key").find("input")[idx]);
+		
+		//console.log($($(".key").find("input")[idx]).is(":checked"));
+		if($($(".key").find("input")[idx]).is(":checked"))
+		{
+			console.log($(".select_key").children("label")[idx]);
+			$($(".select_key").children("label")[idx]).css('display','inline-block');
+		}
+	});
+	
+	
+	/*
+	console.log($(".key").children("input"));
+	console.log($(".key").find("input:checked"));
+	let check_list = $(".key").find("input:checked");
+	
+	console.log($(".key").find("input:checked").length);
+	let count = $(".key").find("input:checked").length;
+	
+	for(i=0; i<count; i++)
+	{
+		//console.log(check_list[i]);
+		
+		let item = $(check_list[i]).attr('id');
+		console.log(item);
+		
+		for(j=0; j<20; j++)
+		{
+			//console.log($($(".select_key").children("label")[j]).attr('for'));
+			let item_list = $($(".select_key").children("label")[j]).attr('for');
+			if(item_list == item)
+			{
+				$($(".select_key").children("label")[j]).css('display','inline-block');
+			}
+		}
+		
+	}
+	*/
+}
+
+function setSubClass(obj)
+{
+	console.log(obj);
+	console.log($(obj).attr('for'));
+	let val = $(obj).attr('for');
+	
+	let item = $(".select_key").find("label[for='"+val+"']");
+	//console.log($(obj).prev().is(":checked"));
+	console.log($(item).attr("for"));
+	let id = $(item).attr("for");
+	
+	let checkbox;
+	console.log($(".key").find("input#"+id).is(":checked"));
+	checkbox = $(".key").find("input#"+id);
+	
+	
+	if(checkbox.is(":checked"))
+	{
+		item.css("display","none");
+	} else
+	{
+		item.css("display","inline-block");
+	}
+	
+	/*
+	//하단 키워드 클릭시 해당 키워드를 얻는다.
+	var val = $(obj).attr("for");
+	val = val.trim();
+	//alert(val);
+	
+	//obj(라벨)의 앞 이웃인 input type을 얻는다.
+	var checkbox = $(obj).prev();
+	//alert(prev);
+	var checked = checkbox.is(":checked");
+	//alert(checked);
+
+
+	//상단키워드를 찾는다.
+	var item = $(".select_key").find("label#" + val);
+	console.log(item);
+	
+	if( checked == true)
+	{
+		//체크가 되어 있으면 unchecked 로 바뀌므로 사라짐.
+		item.css("display","none");
+	}else
+	{
+		item.css("display","inline-block");
+	}
+	*/
+}

@@ -1,0 +1,32 @@
+package ego.vo;
+
+public class BookmarkVO 
+{
+	private String t_no;		//테스트 번호
+	private String no;			//즐겨찾기 번호
+	private String bm_date;	//즐겨찾기 날자
+	
+	
+	public String getBm_Number() 				{return no;				}
+	public String getBm_Date() 				{return bm_date;		}
+	public String getTest_Number() 			{return t_no;			}
+	
+	public void setBm_Number(String no) 		{this.no = no;			}
+	public void setBm_Date(String bm_date) 	{this.bm_date = bm_date;}
+	public void setTest_Number(String t_no) 	{this.t_no = t_no;		}
+	
+	public void PrintInfo()
+	{
+		System.out.println( "========================================");
+		System.out.println("테스트 번호t_no : " + 	getTest_Number());
+		System.out.println("즐겨찾기 번호no : " + 	getBm_Number());
+		System.out.println("즐겨찾기 날자bm_date : " + getBm_Date());
+		System.out.println( "========================================");
+	}
+
+	public static void main(String[] args) 
+	{
+		
+	}
+
+}

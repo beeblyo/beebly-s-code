@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+<link rel="stylesheet" href="../css/teststyles/quizStyle.css">
+<link rel="stylesheet" href="../css/teststyles/finishStyle.css">
+<script type="text/javascript" src="../js/scripts/mainPageScript.js?version=2"></script>
+<script type="text/javascript" src="../js/scripts/fileRead.js?version=2"></script>
+<script type="text/javascript" src="../js/scripts/script.js?version=2"></script>
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<script>
+	$(function(){
+		$.ajax({
+			type: "get",
+			url: "./comment/comment.jsp",
+			dataType: "html",
+			success: function(data) {
+				data = data.trim();
+				//alert(data);
+				
+				$('#reply_view_wrap').html(data);
+			}
+		});
+	});
+</script>
+<main>
+	<div class="test_wrap">
+		<div>
+			<div class="test_image">
+				<img id="thumb_h_img" src="/Ego_v.0.2/img/thumb/mini_test.jpg">
+			</div>
+			<div class="test_info">
+				<div class="info_category">연애</div>
+				<div class="info_title">십이간지로 알아보는 연애 유형</div>
+				<div class="info_joinmember">1,456명<br>참여</div>
+				<button id="startButton" class="start_btn btn" onclick="testStart('test01');">START</button>
+				<div class="test_button_box">
+					<a href="#" title="즐겨찾기"></a>
+					<a href="#" title="잘맞아요"></a>
+					<a href="#" title="재밌어요"></a>
+					<a href="#" title="공유하기"></a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 댓글 영역 -->
+		<div class="reply_wrap">
+			<!-- 댓글 입력 영역 -->
+			<div class="reply new_reply">
+				<div class="reply_profile">
+				</div>
+				<div class="reply_box">
+					<div>
+						<div class="reply_name">에고고</div>
+						<div class="reply_date">2021.01.01</div>
+					</div>
+					<form name="reply" method="post" action="#">
+						<textarea name="post"></textarea>
+						<input type="submit" value="등록">
+					</form>
+				</div>
+			</div>
+			
+			<div id="reply_view_wrap">
+			
+			</div>
+		</div>
+		<!-- 댓글 영역 -->
+	</div>
+</main>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="../include/footer.jsp" %>

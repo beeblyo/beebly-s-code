@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Ego [나를 알아가는 시간]</title>
+		<link href="/Ego_v.0.2/css/base.css" rel="stylesheet">        <!-- 공통 스타일 		-->
+		<link href="/Ego_v.0.2/css/main.css" rel="stylesheet">        <!-- admin 스타일	-->
+		<script src="/Ego_v.0.2/js/jquery-3.6.0.js"></script>         <!-- 제이쿼리 		-->
+		<script src="/Ego_v.0.2/js/script.js" defer="defer"></script> <!-- 공통 스트립트 		-->
+		<!-- 슬라이드를 위한 스크립트 -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" charset="utf-8"/>
+	</head>
+	
+	<body>
+		<div class="cookies">쿠키 배너</div>
+		<header>
+			<div>
+				<h1>
+					<a class="b_logo" href="/Ego_v.0.2/index.jsp"></a>
+				</h1>
+				<div class="login_wrap">
+					<a href="/Ego_v.0.2/login/login.jsp"></a>
+					<a href="/Ego_v.0.2/user/info.jsp"></a>
+				</div>
+				
+				<form name="search" method="get" action="/Ego_v.0.2/search.jsp">
+					<div class="search" >
+						<select class="search_select"> 
+							<option>전체</option>
+							<option>심리</option>
+							<option>연애</option>
+							<option>공포</option>
+							<option>운세</option>
+						</select>
+						<input id="key" type="text" placeholder="검색" autocomplete="off">
+						<input class="search_btn" type="image" src="/Ego_v.0.2/img/icon/search.jpg">
+					</div>
+				</form>
+				
+				<div class="notice_wrap">
+					<a href="/Ego_v.0.2/question.jsp">문의하기</a> | 
+					<a href="/Ego_v.0.2/notice.jsp">공지사항</a>
+				</div>
+			</div>
+		</header>
+		<div class="recent">
+			<p>최근 검색어</p>
+			<ul>
+				<li onmouseover="SearchIn(this);">동물 테스트</li>
+				<li onmouseover="SearchIn(this);">연애 테스트</li>
+				<li onmouseover="SearchIn(this);">공포물</li>
+			</ul>
+		</div>

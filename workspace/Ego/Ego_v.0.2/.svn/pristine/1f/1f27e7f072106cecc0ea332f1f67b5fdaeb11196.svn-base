@@ -1,0 +1,13 @@
+var thumb_h_img  = null;
+
+window.addEventListener('DOMContentLoaded', function(){
+  thumb_h_img = document.getElementById("thumb_h_img");
+  folder = getParameterByName('folder');
+  
+  thumb_h_img.src = "../testlist/" + folder + "/images/title.jpg";
+});
+
+function testStart(folder) {
+	window.location.href = "progress.jsp?folder="+folder;
+	
+}

@@ -1,0 +1,32 @@
+package ego.vo;
+
+public class CommentVO 
+{
+	private String no; 	//´ñ±Û ¹øÈ£
+	private String cl_no;  //´ë´ñ±Û ¹øÈ£
+	private String note; //´ñ±Û ³»¿ë
+	
+	public String getCommentNumber()			{return no;			}
+	public String getCl_Number()				{return cl_no;		}
+	public String getCommentNote()				{return note;		}
+	
+	public void setCommentNumber(String no) 	{this.no = no;		}
+	public void setCl_Cl_Number(String cl_no) 	{this.cl_no = cl_no;}
+	public void setCommentNote(String note) 	{this.note = note;	}
+
+	public void PrintInfo()
+	{
+		System.out.println( "========================================");
+		System.out.println("´ñ±Û ¹øÈ£no : " + getCommentNumber());
+		System.out.println("´ë´ñ±Û ¹øÈ£cl_no : " + getCl_Number());
+		System.out.println("´ñ±Û ³»¿ënote : " + getCommentNote());
+		System.out.println( "========================================");
+	}
+
+
+	public static void main(String[] args) 
+	{
+
+	}
+
+}

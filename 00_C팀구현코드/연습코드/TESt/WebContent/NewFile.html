@@ -1,0 +1,112 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link rel="stylesheet" href="../css/user.css">
+<script src="../js/jquery-3.6.0.js"></script>
+<script src="../js/join.js" charset="UTF-8"></script> 
+<script src="../js/captcha.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<title>join</title>
+</head>
+
+<body style="font-family:'Jua'">
+	<div id="center_shell">
+		<!-- 헤드 -->
+		<div id="head">
+			<div style="width:50%; border:none;  height:80px;">
+				<a href="../main/main.jsp"><img style=" float:left; height:80px" src="../image/logo.png"></a>
+			</div>
+			<div style="text-align:right; width:50%; border:none; font-size:25px; padding-right:10px;">
+				<a href="../user/login.jsp">로그인</a>&nbsp;/
+				<a href="../user/join.jsp">회원가입</a>
+			</div>
+		</div>
+		<div id="head" style="height:50px; background-color:#a5d6a7; border:none; " >
+		</div>
+		<!-- 헤드 -->
+		
+	<!-- 컨텐츠 -->
+		<form name="join_provisoin" method="post" action="../User.do" onsubmit="return FormCheck()">
+			<div id="side_div"></div>
+			<div id="inside"> 
+				<div style="height:60px;border:none;"></div>
+				<div id="join_title">회원가입</div>
+				<div style="height:20px; border:none;"></div>
+				
+				<div id="join_frame">
+					<div id="join_name"style="border:none">&nbsp;아이디</div>
+					<div id="join_text_divsion">
+						<input type="text" name="User_Id" id="User_Id" style="transform: translate(15px);  height:50%;" >	
+					</div>
+					<div id="join_text_divsion" class="Id_Cheak" style="color:red;border:none">
+						&nbsp;미인증
+					</div>
+				</div>
+				<div id="join_frame">
+					<div id="join_name">&nbsp;비밀번호</div>
+					<div id="join_text_divsion" >
+						<input type="password" name="User_Pw" id="User_Pw" style="transform: translate(15px); height:50%;">	
+					</div>
+					<div id="join_text_divsion" style="color:red;border:none"></div>
+				</div>
+				<div id="join_frame">
+					<div id="join_name">&nbsp;비밀번호 확인</div>
+					<div id="join_text_divsion">
+						<input type="password" name="User_passwordCheck" id="User_passwordCheck" style="transform: translate(15px); height:50%;">	
+					</div>
+					<div id="join_text_divsion" class="Pw_Cheak" style="color:red;border:none"></div>
+				</div>
+				<div id="join_frame">
+					<div id="join_name">&nbsp;이름</div>
+					<div id="join_text_divsion">
+						<input type="text" name="User_Name" id="User_Name" style="transform: translate(15px); height:50%;">	
+					</div>
+					<div id="join_text_divsion" style="color:red;border:none"></div>
+				</div>
+				<div id="join_frame">
+					<div id="join_name">&nbsp;이메일</div>
+					<div id="join_text">
+						<input type="text" name="User_Email" id="User_Email" style="transform: translate(15px); height:50%;"> 
+					</div>		
+					<div id="email_form">
+						@
+					</div>
+					<div id="email">		
+						<select name = "mail_kind" id = "mail_kind" style="transform: translate(5px); font-size:17px;">
+							<option value="" selected>주소 선택</option>
+							<option value="hanmail.net">hanmail.net</option>
+							<option value="gmail.com">gmail.com</option>
+							<option value="naver.com">naver.com</option>
+							<option value="nate.com">nate.com</option>
+						</select>
+					</div>
+					<span><input type="button" value="인증하기"></span>
+				</div>
+				<div id="join_frame">
+					<span>이메일 인증 코드: <input type="text" name="User_Code"></span> 
+					<span><input type="button" value="확인"></span>
+				</div>
+				<div style="height:20px;">&nbsp;</div>
+				<div style="height:120px;">
+					<div id="div_captcha">다음 그림과 같은 번호를 입력해주세요.
+					</div>
+					<div id="div_captcha" style="height:70px">
+						<span id="catpcha"></span>
+						<input type="text" id="captcha" style="transform: translate(15px,-29px); height:25px;">
+					</div>			
+				</div>
+				<div style="height:30px;border:none;"></div>
+				<div id="button_container">
+					<input type="submit" value="가입" style="transform: translate(-10%); width:180px; height:50px;background-color:#C8EBFA; border-radius:5px">
+					<input type="button" value="취소" style="transform: translate(10%); width:180px; height:50px;background-color:#C8EBFA; border-radius:5px" onClick="location.href='../main/main.jsp'">
+				</div>
+			</div>
+			<div id="side_div"></div>
+		</form>	
+		<!-- 컨텐츠 -->	
+	</div>
+</body>
+</html>

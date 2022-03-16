@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+
+<%
+
+%>
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<main>
+	<div class="question_wrap">
+		<div class="title_wrap">
+			<h2>문의 사항</h2>
+			<p>작성자 본인만 읽을 수 있습니다.</p>
+		</div>
+		
+		<div class="btn_wrap">
+			<a href="write.jsp" class="btn">글쓰기</a>
+		</div>
+		<div class="table">
+			<div class="thead">
+				<div class="row">
+					<div class="column">번호</div>
+					<div class="column">문의 제목</div>
+					<div class="column">작성자</div>
+					<div class="column">작성일</div>
+					<div class="column">답변여부</div>
+				</div>
+			</div>
+			<div class="tbody">
+				<%
+				for(int i=1; i<=10; i++)
+				{
+					%>
+					<div class="row">
+						<div class="column"><%= i %></div>
+						<div class="column"><a href="view.jsp">질문입니다.</a></div>
+						<div class="column">에고고</div>
+						<div class="column">2021-12-30</div>
+						<div class="column">답변함</div>
+					</div>
+					<%
+				}
+				%>
+			</div>
+		</div>
+		
+		<div class="paging">
+			<ul>
+				<li><a href="#">◀</a></li>
+				<li><a href="#" class="now">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>
+				<li><a href="#">▶</a></li>
+			</ul>
+		</div>
+	</div>
+</main>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="../include/footer.jsp" %>

@@ -1,0 +1,117 @@
+package ego.vo;
+
+import VO.TestVO;
+
+public class TestVO 
+{
+	private String no; 				//테스트 번호
+	private int joincount; 			//테스트 참여수
+	private String title; 			//테스트 제목
+	private String foldername; 		//테스트 폴더명
+	private String[] hashtag; 		//테스트 해시태그
+	private String postdate; 		//테스트 게시일
+	private String hashtag_forsql; 
+	
+	
+	
+	public String getTestNumber() 	{return no;			}
+	public int getJoinCount() 		{return joincount;	}
+	public String getTestTitle() 	{return title;		}
+	public String getFoldername() 	{return foldername;	}	
+	public String getPostdate() 	{return postdate;	}
+	public String[] getHashtag() 	{return hashtag;	}
+	
+	
+	public void setTestNumber(String no) 			{this.no = no;					}
+	public void setJoincount(int joincount) 		{this.joincount = joincount;	}
+	public void setTestTitle(String title) 			{this.title = title;			}
+	public void setFoldername(String foldername) 	{this.foldername = foldername;	}
+	public void setPostdate(String postdate) 		{this.postdate = postdate;		}
+	public void setHashtag(String...hashtag) 		{this.hashtag = hashtag;}
+	public void setHashtag_forsql(String hashtag_forsql) {this.hashtag_forsql = hashtag_forsql;}
+	
+	
+	public void PrintInfo()
+	{
+		System.out.println( "========================================");
+		System.out.println( "테스트번호 no : " + getTestNumber() );
+		System.out.println( "테스트 참여수 joincount : " + getJoinCount() );
+		System.out.println( "테스트 제목 title : " + getTestTitle() );
+		System.out.println( "테스트 폴더명 foldername : " + getFoldername() );
+		System.out.println( "테스트 게시일 postdate : " + getPostdate() );
+		System.out.println( "========================================");
+	}
+	
+	
+	/****************************해시태그***********************************/
+	
+	
+	//한가지 테스트에 대한 해시테그를 열람
+	String[] hashtag_for_string = getHashtag();
+	public void PrintHashInfo()
+	{
+		for(int i=0; i<=hashtag_for_string.length-1; i++)
+		{
+			System.out.println(getTestTitle() + hashtag_for_string[i]);
+		}
+	}
+	
+	
+	/******vo에 집어넣은 값 sql insert위해 배열을 String으로 만들기********/
+	/***콤마(,)단위로 끊어져 String으로 만들어짐*************************/
+	String joined_ary = String.join(",",hashtag_for_string);
+	public String getHashtag_forsql() {return joined_ary;}
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) 
+	{
+		//***************해시태그 세팅*****************//
+		//*********해시태그가 미리 세팅되어 있고 수정불가 하다면 해시태그VO에서 해시값
+		//작성하고 아래와같이 세팅하지 않아도 된다*************************//
+		HashtagVO key = new HashtagVO();
+		key.setHash(0, "역사");
+		key.setHash(1, "정치");
+		String val = key.getHash(0);
+		String val2 = key.getHash(1);
+		//System.out.println(val);
+		//key.HashInfo();
+
+		
+		
+		
+	
+//		/******Test vo값에 해시태그 세팅(집어넣기)********/
+//		TestVO tvo = new TestVO();
+//		
+//		//하나의 테스트에 여러개의 해시태그가 들어가는데, 몇개인지 확정 안되었으니 아래와 같이 받는다
+//		tvo.setHashtag(val,val2);
+//		tvo.PrintHashInfo();
+//		
+//		String[] v = tvo.getHashtag();
+//		
+//		//length-1 안해주면 인덱스 out of 어쩌고 오류발생함
+//		for(int i =0; i<=v.length-1; i++)
+//		{	
+//			System.out.println(" V = " + v[i]);
+//		}
+		
+		
+		
+		
+		/****************************************/
+		TestVO really = new TestVO();
+		
+		really.setHashtag(key.getHash(0),key.getHash(1));
+		really.PrintHashInfo();
+		
+		
+		
+	}
+
+}

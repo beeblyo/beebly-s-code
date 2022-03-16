@@ -1,0 +1,86 @@
+package ego.dto;
+import ego.dbms.*;
+import ego.vo.*;
+
+public class TestDTO extends DBManager
+{
+	String sql = "";
+	//******************테스트를 등록한다******************************//
+	public boolean testInsert(TestVO vo)
+	{
+		if(DBOpen() == false) return false;
+		sql  = "";
+		sql += "insert into user (t_title,t_rjoincount,t_foldername,t_hashtag,t_postdate) ";
+		sql += "values (";
+		sql += "'" + vo.getTestTitle().replace("'","") + "',";
+		sql += "'" + vo.getJoinCount() + "',";		
+		sql += "'" + vo.getFoldername() + "',";		
+		sql += "'" + vo.getHashtag() + "',";		
+		sql += "'" + vo.getPostdate() + "')";
+		RunSQL(sql);
+		return true;
+	}
+	
+	//******************테스트를 삭제한다******************************//
+	public void testDelete(TestVO vo)
+	{
+		if(DBOpen() == true) 
+		{
+			sql  = "";
+			sql += "DELETE FROM test WHERE t_no = " + vo.getTestNumber();
+			RunSQL(sql);
+		}
+	}
+	
+	//******************테스트 제목,폴더명을 업데이트 한다******************************//
+	public boolean testUpdate(TestVO vo)
+	{
+		//브라우저에서 넣을 input 값 변수명
+		String newTitleName = "";
+		String newFolerName = "";
+		if ( DBOpen() == false ) {return false;}
+		sql = "";
+		sql += "UPDATE test ";
+		sql += "SET t_title = '" + newTitleName.replace("'", "") + "',";
+		sql += "t_foldername = '" + newFolerName + "' ";
+		sql += "WHERE t_no = " + vo.getTestNumber();
+		RunSQL(sql);
+		return true;
+	}
+	
+	//test를 목록을 최신순으로 보여준다. (테스트 제목, 참여수, 폴더명)
+	public boolean selectTestIndex(TestVO vo)
+	{
+		if( DBOpen() == false) {return false;}
+		while (GetNext() == true)
+		{
+			sql = "";
+			sql += "SELECT t_title,t_rjoincount,t_foldername ";
+			sql += "FROM test ";
+			sql += "order by t_no desc";
+		}
+		OpenQuery(sql);
+		return true;
+	}
+	
+	//test 시작/결과 화면을 조회한다 (테스트 제목, 참여수, 폴더명, 해시태그, 게시일 )
+	public boolean selectTestView(TestVO vo)
+	{
+		if( DBOpen() == false) {return false;}
+		while (GetNext() == true)
+		{
+			sql = "";
+			sql += "SELECT t_title,t_rjoincount,t_foldername,t_hashtag,t_postdate ";
+			sql += "FROM test ";
+			sql += "WHERE t_no = " + vo.getTestNumber();
+		}
+		OpenQuery(sql);
+		return true;
+	}
+	
+	public static void main(String[] args) 
+	{
+		//***********데이터베이스 연결 종료는 tail에서*************//
+	}
+
+}

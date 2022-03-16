@@ -1,0 +1,13 @@
+package ego.vo;
+
+public class KeywordVO 
+{
+	private String keyword; //분야코드
+	private String name; //분야명
+		
+	public String getKeyword() 			   { return keyword;         }
+	public String getName()				   { return name;            }
+	
+	public void setKeyword(String keyword) { this.keyword = keyword; }
+	public void setName(String name)       { this.name    = name;    }	
+}

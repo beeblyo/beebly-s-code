@@ -1,0 +1,28 @@
+#slideShow
+{
+	width: 670px;
+	height: 210px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	/*리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은 hidden으로 숨겨줘야됨*/
+}
+
+.slides{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1000px; /* 슬라이드할 사진과 마진 총 넓이 */
+	transition: left 0.2s ease-out; /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+
+/* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child)
+{
+	float: left;
+}
+
+.slides li
+{
+	float: left;
+}

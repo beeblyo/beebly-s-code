@@ -1,0 +1,153 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="./include/header.jsp" %>
+<%@ page import="ego.dbms.*" %>
+
+
+
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<%
+	/*************검색 키워드 값 받아서 DB에 저장하는 로직****************/
+	String keywords = request.getParameter("key");
+	System.out.println(keywords);
+
+	if(keywords != null && !keywords.equals(""))
+	{
+		sql  = "insert into search_record (s_recent) ";
+		sql += "values ('" + keywords + "')";
+		dbms.RunSQL(sql);
+	}
+%>
+<div class="main">
+	<div class="wrap">
+		<div class="search_result">
+			“<b>검색어</b>”검색 결과 <b>8</b>개
+		</div>
+		<div class="test_list">
+			<ul>
+				<li>
+					<div class="test_view_wrap">
+						<a href="/Ego_v.0.2/test/start.jsp?folder=test01" title="손모양으로 알아보는 심리 테스트">
+							<div class="test_view">
+								<div>
+									<div class="test_cate">심리</div>
+								</div>
+							</div>
+							<div class="test_title">손모양으로 알아보는 심리 테스트</div> 
+							<div class="test_count">
+								<img src="/Ego_v.0.2/img/icon/eye.png"> 212
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="test_view_wrap">
+						<a href="/Ego_v.0.2/test/start.jsp?folder=test01" title="색깔 심리테스트">
+							<div class="test_view">
+								<div>
+									<div class="test_cate">심리</div>
+								</div>
+							</div>
+							<div class="test_title">색깔 심리테스트</div> 
+							<div class="test_count">
+								<img src="/Ego_v.0.2/img/icon/eye.png"> 185
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="test_view_wrap">
+						<a href="/Ego_v.0.2/test/start.jsp?folder=test01" title="변태성향테스트">
+							<div class="test_view">
+								<div>
+									<div class="test_cate">연애</div>
+								</div>
+							</div>
+							<div class="test_title">변태성향 테스트</div> 
+							<div class="test_count">
+								<img src="/Ego_v.0.2/img/icon/eye.png"> 182
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="test_view_wrap">
+						<a href="/Ego_v.0.2/test/start.jsp?folder=test01" title="MBTI테스트">
+							<div class="test_view">
+								<div>
+									<div class="test_cate">심리</div>
+								</div>
+							</div>
+							<div class="test_title">MBTI 테스트</div> 
+							<div class="test_count">
+								<img src="/Ego_v.0.2/img/icon/eye.png"> 150
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="test_view_wrap">
+						<a href="/Ego_v.0.2/test/start.jsp?folder=test01" title="도형으로 알아보는 계획성 테스트">
+							<div class="test_view">
+								<div>
+									<div class="test_cate">심리</div>
+								</div>
+							</div>
+							<div class="test_title">도형으로 알아보는 계획성 테스트</div> 
+							<div class="test_count">
+								<img src="/Ego_v.0.2/img/icon/eye.png"> 143
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="test_view_wrap">
+						<a href="/Ego_v.0.2/test/start.jsp?folder=test01" title="그림으로보는 심리테스트">
+							<div class="test_view">
+								<div>
+									<div class="test_cate">심리</div>
+								</div>
+							</div>
+							<div class="test_title">그림으로 보는 심리테스트</div> 
+							<div class="test_count">
+								<img src="/Ego_v.0.2/img/icon/eye.png"> 102
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="test_view_wrap">
+						<a href="/Ego_v.0.2/test/start.jsp?folder=test01" title="실리콘밸리 기업 테스트">
+							<div class="test_view">
+								<div>
+									<div class="test_cate">심리</div>
+								</div>
+							</div>
+							<div class="test_title">실리콘밸리 기업 테스트</div> 
+							<div class="test_count">
+								<img src="/Ego_v.0.2/img/icon/eye.png"> 95
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="test_view_wrap">
+						<a href="/Ego_v.0.2/test/start.jsp?folder=test01" title="연애 교과목 테스트">
+							<div class="test_view">
+								<div>
+									<div class="test_cate">연애</div>
+								</div>
+							</div>
+							<div class="test_title">연애 교과목 테스트</div> 
+							<div class="test_count">
+								<img src="/Ego_v.0.2/img/icon/eye.png"> 71
+							</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="./include/footer.jsp" %>

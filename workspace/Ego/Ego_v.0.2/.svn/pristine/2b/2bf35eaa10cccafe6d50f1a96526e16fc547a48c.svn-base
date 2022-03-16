@@ -1,0 +1,72 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../../include/ad_header.jsp" %>
+<main>
+	<div>
+		<div class="admin_wrap">
+			<div class="btn_wrap">
+				<a id="back_btn" class="btn" href="question.jsp">뒤로가기</a>
+				<a class="btn" href="test.jsp">삭제하기</a>
+			</div>
+			
+			<div class="question_wrap">
+				<div class="question">
+					<div class="content">
+						<div>
+							<span>제목</span>
+							<p>질문 있어요!!!</p>
+						</div>
+						<div>
+							<span>작성자</span>
+							<p>에고고</p>
+						</div>
+						<div>
+							<span>작성일</span>
+							<p>2022-01-05</p>
+						</div>
+						<div class="textarea">
+							테스트 종류는 언제쯤 늘어나나요?
+						</div>
+					</div>
+				</div>
+				
+				<!-- ===== 답변 하기 전 혹은 수정할 때 보임 ===== -->
+				<div class="answer">
+					<form name="answer" method="post" action="view.jsp">
+						<div>
+							[관리자] 2022-01-05 
+							<input type="button" value="수정">
+							<input type="submit" value="등록">
+						</div>
+						
+						<textarea>에고를 사랑해주시는 에고고님 정말 반갑습니다.
+질문해주신 내용은 사내에서 열심히 협의 중인 내용으로,
+빠른 시일 내에 새로운 테스트가 올라올 예정입니다.
+또 다른 문의가 있으신 경우 언제든지 말씀 해주세요!
+감사합니다. :)</textarea>
+					</form>
+				</div>
+				<!-- ===== 답변 하기 전 혹은 수정할 때 보임 ===== -->
+				
+				<!-- ===== 답변 하면 보임 ===== -->
+				<div class="answer">
+					<div>
+						[관리자] 2022-01-05 
+						<a href="modify.jsp">수정</a>
+						<a href="question.jsp">삭제</a>
+					</div>
+					
+					<div>
+						에고를 사랑해주시는 에고고님 정말 반갑습니다.<br>
+						질문해주신 내용은 사내에서 열심히 협의 중인 내용으로,<br>
+						빠른 시일 내에 새로운 테스트가 올라올 예정입니다.<br>
+						또 다른 문의가 있으신 경우 언제든지 말씀 해주세요!<br>
+						감사합니다. :)
+					</div>
+				</div>
+				<!-- ===== 답변 하면 보임 ===== -->
+			</div>
+		</div>
+	</div>
+</main>
+<%@ include file="../../include/ad_footer.jsp" %>

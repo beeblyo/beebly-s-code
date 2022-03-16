@@ -1,0 +1,186 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ include file="../include/header.jsp" %>
+<!-- ====================== 메인 컨텐츠 시작 ==================== -->
+<script src="/Ego_v.0.2/js/keyword.js" defer="defer"></script>   <!-- keyword 스트립트 	-->
+<main>
+	<div class="backward_wrap">
+		<div class="back_btn">
+			<a href="./info.jsp"></a>
+		</div>
+	</div>
+	
+	<div>
+		<h3>회원정보</h3>
+		<form class="join_form" name="join" method="post" action="/Ego_v.0.2/user/info.jsp">
+			<div class="info_wrap">
+				<div class="keyword_wrap keyword">
+						<div>
+							<p class="title">선택 키워드</p>
+							<div class="select_key">
+								<label for="key_01" onclick="setFavKeyword(this);">재미있는</label>
+								<label for="key_02" onclick="setFavKeyword(this);">자존심쎈</label>
+								<label for="key_03" onclick="setFavKeyword(this);">게으른</label>
+								<label for="key_04" onclick="setFavKeyword(this);">활발한</label>
+								<label for="key_05" onclick="setFavKeyword(this);">똑똑한</label>
+								<label for="key_06" onclick="setFavKeyword(this);">스릴있는</label>
+								<label for="key_07" onclick="setFavKeyword(this);">차분한</label>
+								<label for="key_08" onclick="setFavKeyword(this);">방콕</label>
+								<label for="key_09" onclick="setFavKeyword(this);">귀여운</label>
+								<label for="key_10" onclick="setFavKeyword(this);">느긋한</label>
+								<label for="key_11" onclick="setFavKeyword(this);">고집쎈</label>
+								<label for="key_12" onclick="setFavKeyword(this);">사랑스러운</label>
+								<label for="key_13" onclick="setFavKeyword(this);">행복한</label>
+								<label for="key_14" onclick="setFavKeyword(this);">착실한</label>
+								<label for="key_15" onclick="setFavKeyword(this);">온화한</label>
+								<label for="key_16" onclick="setFavKeyword(this);">키보드워리어</label>
+								<label for="key_17" onclick="setFavKeyword(this);">파티피플</label>
+								<label for="key_18" onclick="setFavKeyword(this);">현실적인</label>
+								<label for="key_19" onclick="setFavKeyword(this);">즉흥적인</label>
+								<label for="key_20" onclick="setFavKeyword(this);">창의적인</label>
+								
+								<label for="mbti_01" onclick="setFalse(this);">ESFP</label>
+								<label for="mbti_02" onclick="setFalse(this);">ESFJ</label>
+								<label for="mbti_03" onclick="setFalse(this);">ESTP</label>
+								<label for="mbti_04" onclick="setFalse(this);">ESTJ</label>
+								<label for="mbti_05" onclick="setFalse(this);">ENFP</label>
+								<label for="mbti_06" onclick="setFalse(this);">ENFJ</label>
+								<label for="mbti_07" onclick="setFalse(this);">ENTP</label>
+								<label for="mbti_08" onclick="setFalse(this);">ENTJ</label>
+								<label for="mbti_09" onclick="setFalse(this);">ISFP</label>
+								<label for="mbti_10" onclick="setFalse(this);">ISFJ</label>
+								<label for="mbti_11" onclick="setFalse(this);">ISTP</label>
+								<label for="mbti_12" onclick="setFalse(this);">ISTJ</label>
+								<label for="mbti_13" onclick="setFalse(this);">INFP</label>
+								<label for="mbti_14" onclick="setFalse(this);">INFJ</label>
+								<label for="mbti_15" onclick="setFalse(this);">ISTP</label>
+								<label for="mbti_16" onclick="setFalse(this);">INTJ</label>
+							</div>
+						</div>
+					
+						<div>
+							<h3>키워드</h3>
+							<div class="key">
+								<input id="key_01" name="key_01" type="checkbox" value="001" checked="checked">
+								<label for="key_01" onclick="setFavKeyword(this);">재미있는</label>
+								
+								<input id="key_02" name="key_02" type="checkbox" value="002">
+								<label for="key_02" onclick="setFavKeyword(this);">자존심쎈</label>
+								
+								<input id="key_03" name="key_03" type="checkbox" value="003" checked="checked">
+								<label for="key_03" onclick="setFavKeyword(this);">게으른</label>
+								
+								<input id="key_04" name="key_04" type="checkbox" value="004" checked="checked">
+								<label for="key_04" onclick="setFavKeyword(this);">활발한</label>
+								
+								<input id="key_05" name="key_05" type="checkbox" value="005">
+								<label for="key_05" onclick="setFavKeyword(this);">똑똑한</label>
+								
+								<input id="key_06" name="key_06" type="checkbox" value="006">
+								<label for="key_06" onclick="setFavKeyword(this);">스릴있는</label>
+								
+								<input id="key_07" name="key_07" type="checkbox" value="007">
+								<label for="key_07" onclick="setFavKeyword(this);">차분한</label>
+								
+								<input id="key_08" name="key_08" type="checkbox" value="008" checked="checked">
+								<label for="key_08" onclick="setFavKeyword(this);">방콕</label>
+								
+								<input id="key_09" name="key_09" type="checkbox" value="009">
+								<label for="key_09" onclick="setFavKeyword(this);">귀여운</label>
+								
+								<input id="key_10" name="key_10" type="checkbox" value="010" checked="checked">
+								<label for="key_10" onclick="setFavKeyword(this);">느긋한</label>
+								
+								<input id="key_11" name="key_11" type="checkbox" value="011">
+								<label for="key_11" onclick="setFavKeyword(this);">고집쎈</label>
+								
+								<input id="key_12" name="key_12" type="checkbox" value="012" checked="checked">
+								<label for="key_12" onclick="setFavKeyword(this);">사랑스러운</label>
+								
+								<input id="key_13" name="key_13" type="checkbox" value="013">
+								<label for="key_13" onclick="setFavKeyword(this);">행복한</label>
+								
+								<input id="key_14" name="key_14" type="checkbox" value="014" checked="checked">
+								<label for="key_14" onclick="setFavKeyword(this);">착실한</label>
+								
+								<input id="key_15" name="key_15" type="checkbox" value="015">
+								<label for="key_15" onclick="setFavKeyword(this);">온화한</label>
+								
+								<input id="key_16" name="key_16" type="checkbox" value="016">
+								<label for="key_16" onclick="setFavKeyword(this);">키보드워리어</label>
+								
+								<input id="key_17" name="key_17" type="checkbox" value="017">
+								<label for="key_17" onclick="setFavKeyword(this);">파티피플</label>
+								
+								<input id="key_18" name="key_18" type="checkbox" value="018">
+								<label for="key_18" onclick="setFavKeyword(this);">현실적인</label>
+								
+								<input id="key_19" name="key_19" type="checkbox" value="019">
+								<label for="key_19" onclick="setFavKeyword(this);">즉흥적인</label>
+								
+								<input id="key_20" name="key_20" type="checkbox" value="020">
+								<label for="key_20" onclick="setFavKeyword(this);">창의적인</label>
+							</div>
+			
+							<h3>MBTI <span>선택시 취소가 불가능합니다.</span></h3>
+							<div class="mbti">
+								<input id="mbti_01" type="radio" name="mbti" value="ESFP">
+								<label for="mbti_01" onclick="setMbti(this);">ESFP</label>
+								
+								<input id="mbti_02" type="radio" name="mbti" value="ESFJ">
+								<label for="mbti_02" onclick="setMbti(this);">ESFJ</label>
+								
+								<input id="mbti_03" type="radio" name="mbti" value="ESTP">
+								<label for="mbti_03" onclick="setMbti(this);">ESTP</label>
+								
+								<input id="mbti_04" type="radio" name="mbti" value="ESTJ">
+								<label for="mbti_04" onclick="setMbti(this);">ESTJ</label>
+								
+								<input id="mbti_05" type="radio" name="mbti" value="ENFP">
+								<label for="mbti_05" onclick="setMbti(this);">ENFP</label>
+								
+								<input id="mbti_06" type="radio" name="mbti" value="ENFJ">
+								<label for="mbti_06" onclick="setMbti(this);">ENFJ</label>
+								
+								<input id="mbti_07" type="radio" name="mbti" value="ENTP">
+								<label for="mbti_07" onclick="setMbti(this);">ENTP</label>
+								
+								<input id="mbti_08" type="radio" name="mbti" value="ENTJ">
+								<label for="mbti_08" onclick="setMbti(this);">ENTJ</label>
+								
+								<input id="mbti_09" type="radio" name="mbti" value="ISFP">
+								<label for="mbti_09" onclick="setMbti(this);">ISFP</label>
+								
+								<input id="mbti_10" type="radio" name="mbti" value="ISFJ">
+								<label for="mbti_10" onclick="setMbti(this);">ISFJ</label>
+								
+								<input id="mbti_11" type="radio" name="mbti" value="ISTP">
+								<label for="mbti_11" onclick="setMbti(this);">ISTP</label>
+								
+								<input id="mbti_12" type="radio" name="mbti" value="ISTJ">
+								<label for="mbti_12" onclick="setMbti(this);">ISTJ</label>
+								
+								<input id="mbti_13" type="radio" name="mbti" value="INFP" checked="checked">
+								<label for="mbti_13" onclick="setMbti(this);">INFP</label>
+								
+								<input id="mbti_14" type="radio" name="mbti" value="ISFJ">
+								<label for="mbti_14" onclick="setMbti(this);">INFJ</label>
+								
+								<input id="mbti_15" type="radio" name="mbti" value="ISTP">
+								<label for="mbti_15" onclick="setMbti(this);">ISTP</label>
+								
+								<input id="mbti_16" type="radio" name="mbti" value="INTJ">
+								<label for="mbti_16" onclick="setMbti(this);">INTJ</label>
+							</div>
+						</div>
+						<!-- 메인화면으로 바로 이동 jsp작업할 때 redirect 쓰자 -->
+				</div>
+			</div>
+			<div class="clearfix">
+				<input class="re_info_btn btn" type="submit" value="수정완료">
+			</div>
+		</form>
+	</div>
+</main>
+<!-- ====================== 메인 컨텐츠 끝 ==================== -->
+<%@ include file="../include/footer.jsp" %>

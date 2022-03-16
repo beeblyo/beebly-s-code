@@ -1,0 +1,98 @@
+package Test;
+public class TestData {
+
+	
+	public static void main(String[] args) 
+	{
+		//<div>class스타일 opacity : 0; 을 준다
+		String data = 
+		"이성 사이에 진정한 친구는 있다, 없다?:이성 사이에 친구가 어딨어? 절대 없어<div class='answer_type'>F N</div>:친구 있지, 절대 이성으로만 안 보일뿐<div class='answer_type'>F</div>:" + 
+		"좋아하는 사람이 생겨 연락하고자 한다 당신은 어떻게?:바로 먼저 연락한다<div class='answer_type'>N</div>:언제 연락할지, 어떻게 말할지 심사숙고하여 연락한다<div class='answer_type'>I L</div>:" + 
+		"당신의 고백 스타일은?:호감이 보이면 바로 고백한다<div class='answer_type'>F I</div>:상대방이 고백할 때까지 기다린다<div class='answer_type'>F</div>:" + 
+		"호감가는 고백 멘트를 고른다면?:박력 그 자체, \"야 나랑 사귀자\"<div class='answer_type'>F</div>:센스있는 \"우리 내일은 연인으로 만날까요\"<div class='answer_type'>I</div>";
+		
+		
+		String[] firstAry = data.split(":");
+		//System.out.println(firstAryString);
+		/*
+		for(int i =0; i<firstAry.length; i++)
+		{
+			System.out.println(firstAry[i] + " =>"+ i);
+		}
+		System.out.println("======================");
+		*/
+		/*******************질문************************/
+		for(int i = 0; i<firstAry.length; i+=3)
+		{
+			System.out.println(firstAry[i]);
+		}
+		System.out.println("======================>");
+		
+		/*******************답변1************************/
+		for(int i = 1; i<firstAry.length; i+=3)
+		{
+			System.out.println(firstAry[i]);
+		}
+		System.out.println("======================");
+		
+		/*******************답변2************************/
+		for(int i = 2; i<firstAry.length; i+=3)
+		{
+			System.out.println(firstAry[i]);
+		}
+		
+		System.out.println("======================");
+		
+		
+		
+		/*******************결과값(점수)얻는 과정************************/
+		//(1)특정 답변을 선택을 경우, 답변의 결과=타입값을 확인하고 result_value 객체에 값=점수1을 넣는다
+		String s = firstAry[1];
+		//String s1 = firstAry[4];
+		//String s2 = firstAry[7];
+		System.out.println(s);
+		//System.out.println(s1);
+		//System.out.println(s2);
+		TestResultValueVO result_value = new TestResultValueVO();
+		
+		
+		//.contains("검사할 문자값")는 boolean 형으로 참 거짓을 반환한다
+		
+		if (s.contains("I"))
+		{
+			result_value.setI(1);
+		}
+				
+		/*
+		s.contains("N") || s.contains("F") || s.contains("L")))	
+		 
+			 
+			result_value.setN(1); 
+			result_value.setF(1); 
+			result_value.setL(1); 
+		*/
+	
+		
+		
+		/****최대값 구하는 방법 이하 참조
+		
+		
+		public class javaarray{
+		public static void main(String[] args) {
+		int[] intarray= new int[] {1,2,3,4,5};
+		int max = intarray[0];
+		
+		for(int i=1 ; i<intarray.length ; i++) {
+			if(intarray[i]>max) {
+				max = intarray[i];
+			}
+		}
+		System.out.println(max);
+	}
+}
+		
+		
+		*****/
+	}
+
+}

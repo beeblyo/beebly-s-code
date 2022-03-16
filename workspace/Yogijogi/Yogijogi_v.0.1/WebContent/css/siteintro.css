@@ -1,0 +1,555 @@
+/* ==================== intro_wrap ==================== */
+.wrap > .title
+{
+  margin-top: 110px;
+}
+
+main .intro_wrap
+{
+  margin-top: 80px;
+}
+
+.intro_wrap > .title
+{
+  background: rgba(0,0,0,0.3) url(../img/intro.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 50px;
+  margin-bottom: 0;
+
+  color: #fff;
+}
+
+.intro_wrap .title h2
+{
+  margin-bottom: 20px;
+
+  font-size: 36px;
+}
+
+.intro_wrap .title p
+{
+  font-size: 18px;
+}
+
+/* ==================== intro ==================== */
+.intro > div
+{
+  margin-bottom: 100px;
+}
+
+.intro_wrap h3
+{
+  margin-bottom: 10px;
+
+  font-size: 28px;
+}
+
+/* ========== image ========== */
+.intro
+{
+  width: 90%;
+  margin: 0 auto;
+
+  font-size: 0;
+}
+
+.intro img
+{
+  width: 50%; height: 340px;
+}
+
+.explan > div
+{
+  display: inline-block;
+  width: 50%; height: 340px;
+  padding: 20px;
+  background: #eee;
+  vertical-align: top;
+
+  font-size: 16px;
+}
+
+.explan h4
+{
+  margin-bottom: 20px;
+
+  text-align: center;
+  font-size: 30px;
+}
+
+.explan .btn
+{
+  float: right;
+
+  margin-top: 30px;
+  border: 1px solid #282828;
+
+  text-align: center;
+  font-size: 18px;
+}
+
+.intro_form
+{
+  width: 70%; min-width: 600px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* ==================== inquiry ==================== */
+.inquiry
+{
+  background: #11273f;
+
+  color: #fff;
+  font-size: 0;
+}
+
+.inquiry img
+{
+  width: 30%;
+  filter: invert(100%);
+  margin-right: 5%;
+}
+
+.inquiry div
+{
+  display: inline-block;
+  width: 65%;
+
+  vertical-align: top;
+  text-align: center;
+}
+
+.inquiry h5
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-size: 26px;
+}
+
+.inquiry .explan
+{
+  font-size: 16px;
+}
+
+.inquiry .explan p:first-child
+{
+  font-size: 18px;
+}
+
+.inquiry .explan p:nth-child(2)
+{
+  font-size: 38px;
+}
+
+/*====QnA====*/
+.inquiry_title
+{
+  width: 30%;
+  margin: 50px auto 50px auto;
+  padding: 10px 0px;
+  border-bottom: 5px solid black;
+
+	text-align: center;
+}
+
+.QnA_wrap
+{
+	width:70%; min-width:630px;
+	margin:0 auto;
+	padding: 70px 0px;
+
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.qebox > div
+{
+	position: relative;	
+
+	padding:10px;
+	border:1px solid #DEDEE0;
+	border-radius: 5px;
+}
+
+.qebox > div div
+{
+	display:inline-block;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.question_title
+{
+	width: 90%;
+}
+
+.question_arrow
+{
+	float:right;
+
+	width:50px;
+
+	text-align: center;
+	
+}
+
+.qusarrow
+{
+  cursor: pointer;
+}
+
+/*
+.qusarrow:hover
+{
+  width: 5vw; height: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+*/
+
+.ans
+{
+  display: none;
+}
+
+.answer_box
+{
+	padding:10px;
+	margin-bottom:20px;
+	border:1px solid #DEDEE0;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.answer_box > div
+{
+	padding: 5px 10px;
+	border-radius: 5px;
+
+	font-size: 16px;
+}
+
+/* ==================== mypage ==================== */
+.mypage .btn_wrap
+{
+  margin-bottom: 10px;
+}
+
+.mypage .title
+{
+  margin-bottom: 10px;
+
+  text-align: left;
+}
+
+.mypage .title h2
+{
+  display: inline-block;
+  width: 210px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #11273f;
+
+  font-size: 20px;
+  text-align: left;
+}
+
+.mypage .title a
+{
+  display: inline-block;
+  padding: 0 5px;
+
+  vertical-align: middle;
+}
+
+.mypage .title a:hover
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ========== info ========== */
+.mypage .email p
+{
+  display: inline-block;
+  width: 30%;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.mypage .email a:hover
+{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.ticket_menu
+{
+  border-bottom: 1px solid #11273f;
+  margin-bottom: 15px;
+}
+
+.ticket_menu a
+{
+  display: inline-block;
+  width: 140px;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+.ticket_menu a:first-child
+{
+  border-bottom: 3px solid #11273f;
+}
+
+/* ========== ticket ========== */
+.ticket .thead
+{
+  height: 30px;
+  border-bottom: 1px solid #11273f;
+  margin-bottom: 10px;
+}
+
+.ticket .thead .column
+{
+  height: 30px;
+}
+
+.ticket .tbody
+{
+  font-size: 14px;
+}
+
+.ticket .row
+{
+  line-height: 27px;
+}
+
+.ticket .column
+{
+  line-height: inherit;
+}
+
+.ticket .column:nth-child(1) { width: 7%;  }
+.ticket .column:nth-child(2) { width: 27%; vertical-align: top; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ticket .column:nth-child(3) { width: 10%; }
+.ticket .column:nth-child(4) { width: 7%;  }
+.ticket .column:nth-child(5) { width: 10%; }
+.ticket .column:nth-child(6) { width: 14%; }
+.ticket .column:nth-child(7) { width: 18%; }
+
+.ticket .tbody .column:nth-child(2) { text-align: left;  }
+.ticket .tbody .column:nth-child(6) { text-align: right; }
+
+.ticket_list .btn
+{
+  width: 80%; height: 80%;
+  border: 1px solid #11273f;
+}
+
+.ticket .column:nth-child(2) a:hover
+{
+  color: #11273f;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ========== bookmark ========== */
+.bookmark
+{
+  display: none;
+}
+
+.ticket .bookmark .column:nth-child(2) { width: 40%; }
+.ticket .bookmark .column:nth-child(4) { width: 39%; }
+
+/* ==================== modal ==================== */
+.modal_wrap
+{
+  position: fixed;
+  top: 0;
+
+  display: none;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.modal
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px; height: 200px;
+  background: #11273f;
+  padding: 40px;
+
+  text-align: center;
+  color: #fff;
+}
+
+.modal .text
+{
+  margin-bottom: 20px;
+}
+
+.modal .btn_wrap
+{
+  padding: 10px;
+}
+
+.modal .btn_wrap .btn
+{
+  padding: 5px 55px;
+  border: 1px solid #fff;
+}
+
+.modal .btn_wrap .btn:first-child
+{
+  margin-right: 20px;
+}
+
+.modal .btn_wrap .btn:hover
+{
+  background: #fff;
+
+  color: #11273f;
+}
+
+#refund, #password
+{
+  display: none;
+}
+
+#password input[type=password]
+{
+  width: 75%;
+  padding: 5px 10px;
+  margin-top: 15px;
+}
+
+/* ==================== info ==================== */
+.intro_form.info
+{
+  width: 45%;
+  min-width: 440px;
+}
+
+.info form p
+{
+  padding: 5px 10px;
+}
+
+.info form p:nth-child(3)
+{
+  margin-bottom: 20px;
+}
+
+.info form span
+{
+  width: 120px;
+}
+
+.info input[type=text],
+.info input[type=password],
+.info input[type=email]
+{
+  padding: 5px 10px;
+  border: 1px solid #11273f;
+}
+
+.info .readonly
+{
+  background: #eee;
+}
+
+.info .btn_wrap
+{
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 20px;
+
+  text-align: right;
+}
+
+.info button
+{
+  padding: 2px;
+  border: none;
+  background: none;
+  
+  cursor: pointer;
+}
+
+.info button:hover
+{
+  color: red;
+}
+
+/* ========== member ========== */
+.member .title h2
+{
+  width: 75px;
+}
+
+.memver_search
+{
+  margin-bottom: 20px;
+  text-align: center;
+  
+  font-size: 0;
+}
+
+.memver_search select
+{
+  padding: 5px;
+
+  vertical-align: top;
+}
+
+.memver_search input[type=text]
+{
+  padding: 5px 10px;
+  border: 1px solid #eee;
+
+  font-size: 16px;
+}
+
+.memver_search input[type=submit]
+{
+  background: #11273f;
+  padding: 5px;
+  border: 1px solid #11273f;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.member_list .thead
+{
+  border-bottom: 1px solid #11273f;
+}
+
+.member_list .column
+{
+  display: inline-block;
+}
+
+.member_list .column:nth-child(1) { width: 30px; }
+.member_list .column:nth-child(2) { width: calc((90% - 110px)/4);min-width: 100px; }
+.member_list .column:nth-child(3) { width: calc((90% - 110px)/4);min-width: 100px; }
+.member_list .column:nth-child(4) { width: calc((90% - 110px)/2);min-width: 200px; }
+.member_list .column:nth-child(5) { width: 40px; }
+.member_list .column:nth-child(6) { width: 40px; }
+
+.member_list .tbody .row:hover
+{
+  background-color: #eee;
+}
